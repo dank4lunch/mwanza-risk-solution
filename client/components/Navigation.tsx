@@ -93,9 +93,8 @@ export default function Navigation() {
                   {item.name}
                 </Link>
               ))}
-              <div className="px-3 py-2 flex items-center space-x-3">
-                <ThemeToggle />
-                <Button asChild className="flex-1 bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-purple-600 text-white shadow-lg">
+              <div className="px-3 py-2">
+                <Button asChild className="w-full bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-purple-600 text-white shadow-lg">
                   <Link to="/contact" onClick={() => setIsOpen(false)}>
                     Get Quote
                   </Link>
