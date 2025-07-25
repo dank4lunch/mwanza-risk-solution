@@ -123,14 +123,14 @@ export default function About() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 About
                 <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                   Mwanza Risk Solutions
                 </span>
               </h1>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                For over 20 years, we've been South Africa's trusted partner in comprehensive 
+              <p className="text-xl text-gray-200 mb-8">
+                For over 20 years, we've been South Africa's trusted partner in comprehensive
                 insurance solutions, protecting what matters most to our clients.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
