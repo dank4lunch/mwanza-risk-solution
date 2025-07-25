@@ -170,13 +170,13 @@ export default function Index() {
 
             {/* Experience Badges */}
             <div className="flex flex-wrap justify-center gap-6 text-sm font-medium">
-              <div className="flex items-center space-x-2 bg-white/80 backdrop-blur px-4 py-2 rounded-full shadow-lg">
-                <Award className="h-5 w-5 text-primary" />
-                <span>20+ Years of Experience</span>
+              <div className="flex items-center space-x-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/40 border border-blue-200/20 dark:border-blue-400/20 transition-all duration-300 hover:scale-105 hover:-translate-y-1 group">
+                <Award className="h-5 w-5 text-primary group-hover:rotate-12 transition-transform duration-300" />
+                <span className="bg-gradient-to-r from-gray-900 to-blue-600 dark:from-white dark:to-blue-400 bg-clip-text text-transparent">20+ Years of Experience</span>
               </div>
-              <div className="flex items-center space-x-2 bg-white/80 backdrop-blur px-4 py-2 rounded-full shadow-lg">
-                <Users className="h-5 w-5 text-primary" />
-                <span>Your Partner in Managing Risk</span>
+              <div className="flex items-center space-x-2 bg-white/90 dark:bg-gray-800/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-2xl shadow-purple-500/20 hover:shadow-purple-500/40 border border-purple-200/20 dark:border-purple-400/20 transition-all duration-300 hover:scale-105 hover:-translate-y-1 group">
+                <Users className="h-5 w-5 text-purple-600 group-hover:rotate-12 transition-transform duration-300" />
+                <span className="bg-gradient-to-r from-gray-900 to-purple-600 dark:from-white dark:to-purple-400 bg-clip-text text-transparent">Your Partner in Managing Risk</span>
               </div>
             </div>
           </div>
