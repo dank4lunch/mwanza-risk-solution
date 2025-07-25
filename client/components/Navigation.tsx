@@ -79,24 +79,25 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
                   to={item.href}
                   className={cn(
-                    "block px-3 py-2 text-base font-medium transition-colors",
+                    "block px-3 py-2 text-base font-medium transition-all duration-300 rounded-lg",
                     location.pathname === item.href
-                      ? "text-primary bg-primary/10"
-                      : "text-gray-700 hover:text-primary"
+                      ? "text-primary bg-gradient-to-r from-primary/10 to-purple-500/10 border-l-4 border-primary"
+                      : "text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-primary/5"
                   )}
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
-              <div className="px-3 py-2">
-                <Button asChild className="w-full">
+              <div className="px-3 py-2 flex items-center space-x-3">
+                <ThemeToggle />
+                <Button asChild className="flex-1 bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-purple-600 text-white shadow-lg">
                   <Link to="/contact" onClick={() => setIsOpen(false)}>
                     Get Quote
                   </Link>
