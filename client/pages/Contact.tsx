@@ -125,14 +125,14 @@ export default function Contact() {
         </div>
         
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Contact
             <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Mwanza Risk Solutions
             </span>
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-            Get in touch with our expert team for personalized insurance solutions 
+          <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
+            Get in touch with our expert team for personalized insurance solutions
             and comprehensive coverage options.
           </p>
         </div>
