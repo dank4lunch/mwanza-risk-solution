@@ -36,11 +36,35 @@ export interface MovingButtonProps
 
 const MovingButton = React.forwardRef<HTMLButtonElement, MovingButtonProps>(
   ({ className, variant, size, asChild = false, children, ...props }, ref) => {
-    const Comp = asChild ? Slot : "button";
-    
+    if (asChild) {
+      return (
+        <div className="relative inline-block">
+          <Slot
+            className={cn(movingButtonVariants({ variant, size, className }))}
+            ref={ref}
+            {...props}
+          >
+            {children}
+          </Slot>
+
+          {/* 3D shadow effect */}
+          <div className={cn(
+            "absolute inset-0 rounded-2xl transition-all duration-500 -z-10",
+            variant === "primary" && "bg-gradient-to-br from-blue-600/50 via-purple-600/50 to-pink-600/50 blur-lg group-hover:blur-xl",
+            variant === "glowing" && "bg-gradient-to-r from-cyan-500/50 via-blue-600/50 to-purple-700/50 blur-lg",
+            variant === "neon" && "bg-cyan-400/30 blur-lg",
+            variant === "rainbow" && "bg-gradient-to-r from-red-600/50 via-yellow-600/50 via-green-600/50 via-blue-600/50 via-indigo-600/50 to-purple-600/50 blur-lg",
+            variant === "floating" && "bg-gradient-to-tr from-purple-500/50 via-pink-600/50 to-red-600/50 blur-lg"
+          )} style={{
+            transform: "translateY(4px) translateZ(-10px)",
+          }}></div>
+        </div>
+      );
+    }
+
     return (
       <div className="relative inline-block">
-        <Comp
+        <button
           className={cn(movingButtonVariants({ variant, size, className }))}
           ref={ref}
           {...props}
@@ -48,27 +72,25 @@ const MovingButton = React.forwardRef<HTMLButtonElement, MovingButtonProps>(
           <span className="relative z-10 flex items-center gap-2">
             {children}
           </span>
-          
+
           {/* Animated particles for glowing effect */}
           {variant === "glowing" && (
-            <>
-              <div className="absolute inset-0 rounded-2xl opacity-30">
-                <div className="absolute top-2 left-2 w-1 h-1 bg-white rounded-full animate-ping"></div>
-                <div className="absolute top-4 right-3 w-0.5 h-0.5 bg-cyan-300 rounded-full animate-pulse delay-300"></div>
-                <div className="absolute bottom-3 left-4 w-0.5 h-0.5 bg-purple-300 rounded-full animate-ping delay-700"></div>
-                <div className="absolute bottom-2 right-2 w-1 h-1 bg-blue-300 rounded-full animate-pulse delay-1000"></div>
-              </div>
-            </>
+            <div className="absolute inset-0 rounded-2xl opacity-30">
+              <div className="absolute top-2 left-2 w-1 h-1 bg-white rounded-full animate-ping"></div>
+              <div className="absolute top-4 right-3 w-0.5 h-0.5 bg-cyan-300 rounded-full animate-pulse delay-300"></div>
+              <div className="absolute bottom-3 left-4 w-0.5 h-0.5 bg-purple-300 rounded-full animate-ping delay-700"></div>
+              <div className="absolute bottom-2 right-2 w-1 h-1 bg-blue-300 rounded-full animate-pulse delay-1000"></div>
+            </div>
           )}
-          
+
           {/* Ripple effect for primary */}
           {variant === "primary" && (
             <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500">
               <div className="absolute inset-0 bg-gradient-radial from-white/20 via-transparent to-transparent rounded-2xl animate-ping"></div>
             </div>
           )}
-        </Comp>
-        
+        </button>
+
         {/* 3D shadow effect */}
         <div className={cn(
           "absolute inset-0 rounded-2xl transition-all duration-500 -z-10",
