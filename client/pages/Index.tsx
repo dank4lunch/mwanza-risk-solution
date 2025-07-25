@@ -251,40 +251,40 @@ export default function Index() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
-              <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-6">
+              <h2 className="text-4xl font-bold text-white mb-6">
                 Why Choose Mwanza Risk Solutions?
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Expert Guidance</h3>
-                    <p className="text-gray-600 dark:text-gray-300">Our experienced team provides personalized advice to help you make informed decisions about your insurance needs.</p>
+                    <h3 className="font-semibold text-white mb-2">Expert Guidance</h3>
+                    <p className="text-gray-200">Our experienced team provides personalized advice to help you make informed decisions about your insurance needs.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Competitive Rates</h3>
-                    <p className="text-gray-600 dark:text-gray-300">We work with leading insurers to offer you the most competitive rates without compromising on coverage quality.</p>
+                    <h3 className="font-semibold text-white mb-2">Competitive Rates</h3>
+                    <p className="text-gray-200">We work with leading insurers to offer you the most competitive rates without compromising on coverage quality.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">24/7 Support</h3>
-                    <p className="text-gray-600 dark:text-gray-300">Our dedicated support team is available around the clock to assist you with claims and policy inquiries.</p>
+                    <h3 className="font-semibold text-white mb-2">24/7 Support</h3>
+                    <p className="text-gray-200">Our dedicated support team is available around the clock to assist you with claims and policy inquiries.</p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Quick Claims Processing</h3>
-                    <p className="text-gray-600 dark:text-gray-300">We ensure fast and fair claims processing, so you can get back on your feet as quickly as possible.</p>
+                    <h3 className="font-semibold text-white mb-2">Quick Claims Processing</h3>
+                    <p className="text-gray-200">We ensure fast and fair claims processing, so you can get back on your feet as quickly as possible.</p>
                   </div>
                 </div>
               </div>
@@ -297,9 +297,9 @@ export default function Index() {
               />
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-2xl"></div>
               <div className="absolute bottom-6 left-6 right-6">
-                <div className="bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm p-6 rounded-xl shadow-lg">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Ready to Get Protected?</h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">Get a personalized insurance quote in minutes.</p>
+                <div className="bg-gray-800/95 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700/50">
+                  <h3 className="text-xl font-bold text-white mb-2">Ready to Get Protected?</h3>
+                  <p className="text-gray-200 mb-4">Get a personalized insurance quote in minutes.</p>
                   <MovingButton asChild variant="primary" size="sm">
                     <Link to="/contact">Get Free Quote</Link>
                   </MovingButton>
