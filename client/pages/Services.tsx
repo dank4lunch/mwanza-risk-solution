@@ -118,7 +118,7 @@ export default function Services() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 via-white to-blue-50">
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
             Our Insurance
