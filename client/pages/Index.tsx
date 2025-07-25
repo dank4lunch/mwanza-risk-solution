@@ -144,14 +144,14 @@ export default function Index() {
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
-            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
               Your Partners in
               <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 Personal Insurance
               </span>
             </h1>
-            
-            <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-3xl mx-auto">
+
+            <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
               With over 20 years of experience, we provide comprehensive insurance solutions
               to protect what matters most to you and your business.
             </p>
