@@ -191,7 +191,7 @@ export default function Index() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-white dark:bg-gray-900/50 backdrop-blur-xl">
+      <section className="py-20 bg-gray-900/50 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -200,8 +200,8 @@ export default function Index() {
                   <stat.icon className="h-10 w-10 text-primary group-hover:scale-110 transition-transform duration-300" />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl group-hover:from-white/30"></div>
                 </div>
-                <div className="text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-600 to-purple-600 dark:from-white dark:via-blue-400 dark:to-purple-400 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">{stat.value}</div>
-                <div className="text-gray-600 dark:text-gray-400 group-hover:text-primary transition-colors duration-300">{stat.label}</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-white via-blue-400 to-purple-400 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">{stat.value}</div>
+                <div className="text-gray-300 group-hover:text-primary transition-colors duration-300">{stat.label}</div>
               </div>
             ))}
           </div>
