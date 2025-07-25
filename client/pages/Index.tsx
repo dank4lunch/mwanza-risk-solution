@@ -156,16 +156,16 @@ export default function Index() {
               to protect what matters most to you and your business.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button asChild size="lg" className="text-lg px-8 py-6">
+            <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
+              <MovingButton asChild variant="primary" size="lg">
                 <Link to="/contact">
                   Contact Us
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Link>
-              </Button>
-              <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6">
+              </MovingButton>
+              <MovingButton asChild variant="glowing" size="lg">
                 <Link to="/services">Learn More</Link>
-              </Button>
+              </MovingButton>
             </div>
 
             {/* Experience Badges */}
