@@ -209,14 +209,14 @@ export default function Index() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 via-blue-50/50 to-purple-50/50 dark:from-gray-900 dark:via-blue-900/10 dark:to-purple-900/10">
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900/10 to-purple-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Comprehensive Insurance Solutions
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              From personal protection to business coverage, we offer a complete range 
+            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+              From personal protection to business coverage, we offer a complete range
               of insurance products tailored to your needs.
             </p>
           </div>
