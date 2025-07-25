@@ -171,16 +171,16 @@ export default function Services() {
                   </div>
 
                   <div className="flex flex-col sm:flex-row gap-3">
-                    <Button asChild className="flex-1">
+                    <MovingButton asChild variant="primary" className="flex-1">
                       <Link to="/contact">
                         Get Quote
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Link>
-                    </Button>
-                    <Button variant="outline" className="flex-1">
+                    </MovingButton>
+                    <MovingButton variant="outline" className="flex-1">
                       <Phone className="mr-2 h-4 w-4" />
                       Call Now
-                    </Button>
+                    </MovingButton>
                   </div>
                 </CardContent>
               </Card>
