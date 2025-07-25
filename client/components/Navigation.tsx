@@ -53,11 +53,10 @@ export default function Navigation() {
 
           {/* Contact Button */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
+            <div className="flex items-center space-x-2 text-sm text-gray-300">
               <Phone className="h-4 w-4 text-primary" />
               <span>+27 (0) 11 123 4567</span>
             </div>
-            <ThemeToggle />
             <Button asChild className="bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-purple-600 text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
               <Link to="/contact">Get Quote</Link>
             </Button>
