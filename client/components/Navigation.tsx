@@ -21,13 +21,16 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="bg-primary p-2 rounded-lg">
-              <Shield className="h-6 w-6 text-white" />
+          <Link to="/" className="flex items-center space-x-3 group">
+            <div className="relative bg-gradient-to-br from-primary via-blue-500 to-purple-600 p-3 rounded-xl shadow-lg shadow-blue-500/25 transition-all duration-300 group-hover:shadow-blue-500/40 group-hover:scale-110 group-hover:rotate-3">
+              <Shield className="h-6 w-6 text-white relative z-10" />
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-xl"></div>
             </div>
-            <div>
-              <div className="font-bold text-lg text-gray-900">Mwanza Risk Solutions</div>
-              <div className="text-xs text-gray-600">Your Partners in Personal Insurance</div>
+            <div className="transition-all duration-300 group-hover:translate-x-1">
+              <div className="font-bold text-lg text-gray-900 dark:text-white bg-gradient-to-r from-gray-900 to-blue-600 dark:from-white dark:to-blue-400 bg-clip-text text-transparent">
+                Mwanza Risk Solutions
+              </div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Your Partners in Personal Insurance</div>
             </div>
           </Link>
 
