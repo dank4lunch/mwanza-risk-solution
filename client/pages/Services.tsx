@@ -120,13 +120,13 @@ export default function Services() {
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
+          <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Our Insurance
             <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
               Services
             </span>
           </h1>
-          <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-200 mb-8 max-w-3xl mx-auto">
             Comprehensive insurance solutions tailored to protect your personal and business interests.
             Choose from our wide range of coverage options.
           </p>
