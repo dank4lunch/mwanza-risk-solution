@@ -77,7 +77,7 @@ export default function Navigation() {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl border-t border-gray-200/50 dark:border-gray-700/50">
+            <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-gray-900/95 backdrop-blur-xl border-t border-gray-700/50">
               {navigation.map((item) => (
                 <Link
                   key={item.name}
@@ -86,7 +86,7 @@ export default function Navigation() {
                     "block px-3 py-2 text-base font-medium transition-all duration-300 rounded-lg",
                     location.pathname === item.href
                       ? "text-primary bg-gradient-to-r from-primary/10 to-purple-500/10 border-l-4 border-primary"
-                      : "text-gray-700 dark:text-gray-300 hover:text-primary hover:bg-primary/5"
+                      : "text-gray-200 hover:text-primary hover:bg-primary/5"
                   )}
                   onClick={() => setIsOpen(false)}
                 >
