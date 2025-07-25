@@ -138,16 +138,24 @@ export default function Services() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
               <Card key={index} className="group hover:shadow-2xl transition-all duration-300 overflow-hidden">
-                <CardHeader className={`${service.bgColor} pb-6`}>
-                  <div className="flex items-center space-x-4">
-                    <div className={`p-3 bg-white rounded-xl shadow-lg ${service.color}`}>
-                      <service.icon className="h-8 w-8" />
-                    </div>
-                    <div>
-                      <CardTitle className="text-2xl text-gray-900">{service.title}</CardTitle>
+                {/* Service Image */}
+                <div className="relative h-48 overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={`${service.title} insurance coverage`}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                  <div className="absolute top-4 left-4">
+                    <div className={`p-3 bg-white/90 backdrop-blur-sm rounded-xl shadow-lg ${service.color}`}>
+                      <service.icon className="h-6 w-6" />
                     </div>
                   </div>
-                </CardHeader>
+                  <div className="absolute bottom-4 left-4">
+                    <CardTitle className="text-xl text-white">{service.title}</CardTitle>
+                    <p className="text-green-400 font-semibold">{service.startingPrice}</p>
+                  </div>
+                </div>
                 <CardContent className="p-6">
                   <p className="text-gray-600 mb-6">{service.description}</p>
                   
