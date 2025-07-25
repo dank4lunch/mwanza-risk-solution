@@ -26,10 +26,10 @@ export default function Navigation() {
               <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-xl"></div>
             </div>
             <div className="transition-all duration-300 group-hover:translate-x-1">
-              <div className="font-bold text-lg text-gray-900 dark:text-white bg-gradient-to-r from-gray-900 to-blue-600 dark:from-white dark:to-blue-400 bg-clip-text text-transparent">
+              <div className="font-bold text-lg bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
                 Mwanza Risk Solutions
               </div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Your Partners in Personal Insurance</div>
+              <div className="text-xs text-gray-300">Your Partners in Personal Insurance</div>
             </div>
           </Link>
 
