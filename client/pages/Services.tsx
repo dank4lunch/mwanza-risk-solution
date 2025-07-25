@@ -22,13 +22,15 @@ export default function Services() {
       description: "Comprehensive protection for your business assets, operations, and employees.",
       features: [
         "Property Insurance",
-        "Liability Coverage", 
+        "Liability Coverage",
         "Business Interruption",
         "Workers Compensation",
         "Professional Indemnity"
       ],
       color: "text-blue-600",
       bgColor: "bg-blue-50",
+      image: "https://images.pexels.com/photos/4161619/pexels-photo-4161619.jpeg",
+      startingPrice: "From R299/month",
     },
     {
       icon: Heart,
@@ -43,6 +45,8 @@ export default function Services() {
       ],
       color: "text-red-500",
       bgColor: "bg-red-50",
+      image: "https://images.pexels.com/photos/207852/pexels-photo-207852.jpeg",
+      startingPrice: "From R199/month",
     },
     {
       icon: Car,
@@ -57,6 +61,8 @@ export default function Services() {
       ],
       color: "text-green-600",
       bgColor: "bg-green-50",
+      image: "https://images.pexels.com/photos/2265634/pexels-photo-2265634.jpeg",
+      startingPrice: "From R399/month",
     },
     {
       icon: Wheat,
@@ -71,6 +77,8 @@ export default function Services() {
       ],
       color: "text-yellow-600",
       bgColor: "bg-yellow-50",
+      image: "https://images.pexels.com/photos/33135620/pexels-photo-33135620.jpeg",
+      startingPrice: "From R599/month",
     },
     {
       icon: Cross,
@@ -85,6 +93,8 @@ export default function Services() {
       ],
       color: "text-purple-600",
       bgColor: "bg-purple-50",
+      image: "https://images.pexels.com/photos/6823488/pexels-photo-6823488.jpeg",
+      startingPrice: "From R799/month",
     },
     {
       icon: UserCheck,
@@ -99,6 +109,8 @@ export default function Services() {
       ],
       color: "text-gray-600",
       bgColor: "bg-gray-50",
+      image: "https://images.pexels.com/photos/8730327/pexels-photo-8730327.jpeg",
+      startingPrice: "From R99/month",
     },
   ];
 
