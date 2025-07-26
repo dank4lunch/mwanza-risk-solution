@@ -124,15 +124,29 @@ export default function Index() {
 
           {/* Floating particles */}
           <div className="absolute inset-0">
-            {[...Array(12)].map((_, i) => (
+            {[...Array(20)].map((_, i) => (
               <div
                 key={i}
                 className={`absolute w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full animate-particle opacity-60`}
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
-                  animationDelay: `${i * 0.5}s`,
-                  animationDuration: `${3 + Math.random() * 2}s`,
+                  animationDelay: `${i * 0.3}s`,
+                  animationDuration: `${2 + Math.random() * 3}s`,
+                }}
+              />
+            ))}
+
+            {/* Larger floating elements */}
+            {[...Array(6)].map((_, i) => (
+              <div
+                key={`large-${i}`}
+                className={`absolute w-1 h-1 bg-gradient-to-r from-cyan-300 to-blue-400 rounded-full animate-float opacity-40`}
+                style={{
+                  left: `${Math.random() * 100}%`,
+                  top: `${Math.random() * 100}%`,
+                  animationDelay: `${i * 0.8}s`,
+                  animationDuration: `${4 + Math.random() * 2}s`,
                 }}
               />
             ))}
@@ -359,7 +373,7 @@ export default function Index() {
           {/* Floating badges */}
           <div className="flex flex-wrap justify-center gap-6">
             {[
-              { text: "ISO 27001 Certified", icon: "🔒" },
+              { text: "ISO 27001 Certified", icon: "���" },
               { text: "A+ BBB Rating", icon: "⭐" },
               { text: "PCI DSS Compliant", icon: "🛡️" },
               { text: "24/7 Support", icon: "🎧" }
