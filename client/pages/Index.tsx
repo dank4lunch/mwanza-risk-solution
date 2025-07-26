@@ -240,12 +240,78 @@ export default function Index() {
           </div>
 
           <div className="text-center mt-12">
-            <Button asChild size="lg">
+            <MovingButton asChild variant="glowing" size="lg">
               <Link to="/services">
                 View All Services
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
-            </Button>
+            </MovingButton>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Features Section */}
+      <section className="py-20 bg-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/3 left-1/6 w-72 h-72 bg-gradient-to-r from-green-400/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-300"></div>
+          <div className="absolute bottom-1/3 right-1/6 w-64 h-64 bg-gradient-to-r from-orange-400/20 to-yellow-500/20 rounded-full blur-3xl animate-float delay-700"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Why We're Different
+            </h2>
+            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+              Experience the future of insurance with our innovative approach and cutting-edge technology.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {[
+              {
+                icon: "🚀",
+                title: "Instant Quotes",
+                description: "Get personalized quotes in under 60 seconds using our AI-powered assessment.",
+                delay: "0ms"
+              },
+              {
+                icon: "📱",
+                title: "Mobile First",
+                description: "Manage your policies, file claims, and get support right from your phone.",
+                delay: "200ms"
+              },
+              {
+                icon: "🔒",
+                title: "Bank-Level Security",
+                description: "Your data is protected with military-grade encryption and security protocols.",
+                delay: "400ms"
+              },
+              {
+                icon: "⚡",
+                title: "Lightning Claims",
+                description: "Most claims processed and paid within 24 hours using automated systems.",
+                delay: "600ms"
+              }
+            ].map((feature, index) => (
+              <div
+                key={index}
+                className="group relative bg-gradient-to-br from-gray-800/60 to-gray-700/40 backdrop-blur-sm rounded-2xl p-6 border border-gray-600/30 hover:border-primary/40 transition-all duration-500 hover:scale-105 hover:-translate-y-2 cursor-pointer"
+                style={{ animationDelay: feature.delay }}
+              >
+                <div className="text-4xl mb-4 transform group-hover:scale-110 group-hover:rotate-12 transition-transform duration-300">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-3 group-hover:text-primary transition-colors duration-300">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-200 group-hover:text-gray-100 transition-colors duration-300">
+                  {feature.description}
+                </p>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
