@@ -138,7 +138,7 @@ export default function Services() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 overflow-hidden">
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 overflow-hidden bg-gray-800/50 border-gray-700/50">
                 {/* Service Image */}
                 <div className="relative h-48 overflow-hidden">
                   <img
@@ -158,14 +158,14 @@ export default function Services() {
                   </div>
                 </div>
                 <CardContent className="p-6">
-                  <p className="text-gray-600 mb-6">{service.description}</p>
-                  
+                  <p className="text-gray-200 mb-6">{service.description}</p>
+
                   <div className="space-y-3 mb-6">
-                    <h4 className="font-semibold text-gray-900">What's Covered:</h4>
+                    <h4 className="font-semibold text-white">What's Covered:</h4>
                     {service.features.map((feature, featureIndex) => (
                       <div key={featureIndex} className="flex items-center space-x-3">
                         <CheckCircle className={`h-4 w-4 ${service.color}`} />
-                        <span className="text-gray-600">{feature}</span>
+                        <span className="text-gray-200">{feature}</span>
                       </div>
                     ))}
                   </div>
