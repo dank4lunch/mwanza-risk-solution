@@ -147,7 +147,9 @@
   }
 
   .shadow-rainbow {
-    box-shadow: 0 0 30px rgba(255, 0, 150, 0.5), 0 0 60px rgba(0, 255, 255, 0.3);
+    box-shadow:
+      0 0 30px rgba(255, 0, 150, 0.5),
+      0 0 60px rgba(0, 255, 255, 0.3);
   }
 
   @keyframes fadeInUp {
@@ -162,7 +164,8 @@
   }
 
   @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px) rotate(0deg);
     }
     25% {
@@ -177,7 +180,8 @@
   }
 
   @keyframes gradient-x {
-    0%, 100% {
+    0%,
+    100% {
       background-position: 0% 50%;
     }
     50% {
@@ -186,7 +190,8 @@
   }
 
   @keyframes gradient-y {
-    0%, 100% {
+    0%,
+    100% {
       background-position: 50% 0%;
     }
     50% {
@@ -195,7 +200,8 @@
   }
 
   @keyframes gradient-xy {
-    0%, 100% {
+    0%,
+    100% {
       background-position: 0% 0%;
     }
     25% {
@@ -214,7 +220,8 @@
   }
 
   @keyframes particle {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0px) translateX(0px) scale(1);
       opacity: 1;
     }
@@ -233,7 +240,9 @@
       box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
     }
     to {
-      box-shadow: 0 0 30px rgba(147, 51, 234, 0.8), 0 0 40px rgba(59, 130, 246, 0.6);
+      box-shadow:
+        0 0 30px rgba(147, 51, 234, 0.8),
+        0 0 40px rgba(59, 130, 246, 0.6);
     }
   }
 
@@ -242,7 +251,8 @@
   }
 
   @keyframes bounce-slow {
-    0%, 100% {
+    0%,
+    100% {
       transform: translateY(0);
     }
     50% {
@@ -255,7 +265,8 @@
   }
 
   @keyframes wiggle {
-    0%, 100% {
+    0%,
+    100% {
       transform: rotate(0deg);
     }
     25% {
@@ -271,7 +282,8 @@
   }
 
   @keyframes pulse-slow {
-    0%, 100% {
+    0%,
+    100% {
       opacity: 1;
     }
     50% {
