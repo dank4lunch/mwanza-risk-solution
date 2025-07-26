@@ -18,6 +18,7 @@ import {
   ArrowRight,
   CheckCircle,
   Star,
+  Phone,
 } from "lucide-react";
 
 export default function Index() {
