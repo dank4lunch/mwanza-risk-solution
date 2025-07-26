@@ -212,9 +212,9 @@ export default function About() {
                 >
                   {/* Timeline Dot */}
                   <div className={`relative z-10 flex items-center justify-center w-16 h-16 rounded-2xl transition-all duration-300 ${
-                    activeTimeline === index 
-                      ? 'bg-gradient-to-br from-primary to-purple-500 shadow-lg shadow-primary/30' 
-                      : 'bg-white dark:bg-gray-800 border-2 border-primary/20 group-hover:border-primary/40'
+                    activeTimeline === index
+                      ? 'bg-gradient-to-br from-primary to-purple-500 shadow-lg shadow-primary/30'
+                      : 'bg-gray-800 border-2 border-primary/20 group-hover:border-primary/40'
                   }`}>
                     <item.icon className={`h-8 w-8 transition-colors duration-300 ${
                       activeTimeline === index ? 'text-white' : 'text-primary'
