@@ -223,13 +223,13 @@ export default function Index() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gray-800/50 border-gray-700/50">
                 <CardContent className="p-6">
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg mb-4 bg-gray-100 group-hover:bg-primary/10 transition-colors ${service.color}`}>
+                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg mb-4 bg-gray-700/50 group-hover:bg-primary/10 transition-colors ${service.color}`}>
                     <service.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
-                  <p className="text-gray-600 mb-4">{service.description}</p>
+                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  <p className="text-gray-200 mb-4">{service.description}</p>
                   <div className="flex items-center text-primary font-medium">
                     Learn more
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
