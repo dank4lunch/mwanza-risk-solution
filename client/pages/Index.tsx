@@ -80,19 +80,22 @@ export default function Index() {
     {
       name: "John Smith",
       role: "Business Owner",
-      content: "Mwanza Risk Solutions provided excellent service when I needed business insurance. Professional and reliable!",
+      content:
+        "Mwanza Risk Solutions provided excellent service when I needed business insurance. Professional and reliable!",
       rating: 5,
     },
     {
       name: "Sarah Johnson",
       role: "Family Protection",
-      content: "They helped me secure comprehensive life insurance for my family. Peace of mind is priceless.",
+      content:
+        "They helped me secure comprehensive life insurance for my family. Peace of mind is priceless.",
       rating: 5,
     },
     {
       name: "Michael Brown",
       role: "Farm Owner",
-      content: "Their agricultural insurance saved my farm during the drought. Highly recommend their services!",
+      content:
+        "Their agricultural insurance saved my farm during the drought. Highly recommend their services!",
       rating: 5,
     },
   ];
@@ -167,8 +170,9 @@ export default function Index() {
             </h1>
 
             <p className="text-xl md:text-2xl text-gray-200 mb-8 max-w-3xl mx-auto">
-              With over 20 years of experience, we provide comprehensive insurance solutions
-              to protect what matters most to you and your business.
+              With over 20 years of experience, we provide comprehensive
+              insurance solutions to protect what matters most to you and your
+              business.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
@@ -187,11 +191,15 @@ export default function Index() {
             <div className="flex flex-wrap justify-center gap-6 text-sm font-medium">
               <div className="flex items-center space-x-2 bg-gray-800/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/40 border border-blue-400/20 transition-all duration-300 hover:scale-105 hover:-translate-y-1 group">
                 <Award className="h-5 w-5 text-primary group-hover:rotate-12 transition-transform duration-300" />
-                <span className="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">20+ Years of Experience</span>
+                <span className="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
+                  20+ Years of Experience
+                </span>
               </div>
               <div className="flex items-center space-x-2 bg-gray-800/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-2xl shadow-purple-500/20 hover:shadow-purple-500/40 border border-purple-400/20 transition-all duration-300 hover:scale-105 hover:-translate-y-1 group">
                 <Users className="h-5 w-5 text-purple-400 group-hover:rotate-12 transition-transform duration-300" />
-                <span className="bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">Your Partner in Managing Risk</span>
+                <span className="bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
+                  Your Partner in Managing Risk
+                </span>
               </div>
             </div>
           </div>
@@ -215,8 +223,12 @@ export default function Index() {
                   <stat.icon className="h-10 w-10 text-primary group-hover:scale-110 transition-transform duration-300" />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl group-hover:from-white/30"></div>
                 </div>
-                <div className="text-4xl font-bold bg-gradient-to-r from-white via-blue-400 to-purple-400 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">{stat.value}</div>
-                <div className="text-gray-300 group-hover:text-primary transition-colors duration-300">{stat.label}</div>
+                <div className="text-4xl font-bold bg-gradient-to-r from-white via-blue-400 to-purple-400 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">
+                  {stat.value}
+                </div>
+                <div className="text-gray-300 group-hover:text-primary transition-colors duration-300">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -231,19 +243,26 @@ export default function Index() {
               Comprehensive Insurance Solutions
             </h2>
             <p className="text-xl text-gray-200 max-w-2xl mx-auto">
-              From personal protection to business coverage, we offer a complete range
-              of insurance products tailored to your needs.
+              From personal protection to business coverage, we offer a complete
+              range of insurance products tailored to your needs.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <Card key={index} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gray-800/50 border-gray-700/50">
+              <Card
+                key={index}
+                className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-2 bg-gray-800/50 border-gray-700/50"
+              >
                 <CardContent className="p-6">
-                  <div className={`inline-flex items-center justify-center w-12 h-12 rounded-lg mb-4 bg-gray-700/50 group-hover:bg-primary/10 transition-colors ${service.color}`}>
+                  <div
+                    className={`inline-flex items-center justify-center w-12 h-12 rounded-lg mb-4 bg-gray-700/50 group-hover:bg-primary/10 transition-colors ${service.color}`}
+                  >
                     <service.icon className="h-6 w-6" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white mb-3">{service.title}</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">
+                    {service.title}
+                  </h3>
                   <p className="text-gray-200 mb-4">{service.description}</p>
                   <div className="flex items-center text-primary font-medium">
                     Learn more
@@ -278,7 +297,8 @@ export default function Index() {
               Why We're Different
             </h2>
             <p className="text-xl text-gray-200 max-w-2xl mx-auto">
-              Experience the future of insurance with our innovative approach and cutting-edge technology.
+              Experience the future of insurance with our innovative approach
+              and cutting-edge technology.
             </p>
           </div>
 
@@ -287,27 +307,31 @@ export default function Index() {
               {
                 icon: "🚀",
                 title: "Instant Quotes",
-                description: "Get personalized quotes in under 60 seconds using our AI-powered assessment.",
-                delay: "0ms"
+                description:
+                  "Get personalized quotes in under 60 seconds using our AI-powered assessment.",
+                delay: "0ms",
               },
               {
                 icon: "📱",
                 title: "Mobile First",
-                description: "Manage your policies, file claims, and get support right from your phone.",
-                delay: "200ms"
+                description:
+                  "Manage your policies, file claims, and get support right from your phone.",
+                delay: "200ms",
               },
               {
                 icon: "🔒",
                 title: "Bank-Level Security",
-                description: "Your data is protected with military-grade encryption and security protocols.",
-                delay: "400ms"
+                description:
+                  "Your data is protected with military-grade encryption and security protocols.",
+                delay: "400ms",
               },
               {
                 icon: "⚡",
                 title: "Lightning Claims",
-                description: "Most claims processed and paid within 24 hours using automated systems.",
-                delay: "600ms"
-              }
+                description:
+                  "Most claims processed and paid within 24 hours using automated systems.",
+                delay: "600ms",
+              },
             ].map((feature, index) => (
               <div
                 key={index}
@@ -336,7 +360,10 @@ export default function Index() {
         <div className="absolute inset-0">
           {/* Animated grid pattern */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,black_70%,transparent_110%)] animate-pulse"></div>
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-conic from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-spin" style={{ animationDuration: '20s' }}></div>
+          <div
+            className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-conic from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-spin"
+            style={{ animationDuration: "20s" }}
+          ></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -345,7 +372,8 @@ export default function Index() {
               Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-              Join thousands of satisfied customers who trust us with their most valuable assets.
+              Join thousands of satisfied customers who trust us with their most
+              valuable assets.
             </p>
           </div>
 
@@ -354,7 +382,7 @@ export default function Index() {
               { label: "Insurance Licenses", value: "15+", icon: "📋" },
               { label: "Partner Networks", value: "50+", icon: "🤝" },
               { label: "Countries Served", value: "12", icon: "🌍" },
-              { label: "Claims Success Rate", value: "99.2%", icon: "✅" }
+              { label: "Claims Success Rate", value: "99.2%", icon: "✅" },
             ].map((stat, index) => (
               <div key={index} className="text-center group">
                 <div className="relative bg-gradient-to-br from-gray-700/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-600/30 group-hover:border-primary/50 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-1">
@@ -364,7 +392,9 @@ export default function Index() {
                   <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
                     {stat.value}
                   </div>
-                  <div className="text-gray-300 text-sm font-medium">{stat.label}</div>
+                  <div className="text-gray-300 text-sm font-medium">
+                    {stat.label}
+                  </div>
                   <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
               </div>
@@ -377,7 +407,7 @@ export default function Index() {
               { text: "ISO 27001 Certified", icon: "���" },
               { text: "A+ BBB Rating", icon: "⭐" },
               { text: "PCI DSS Compliant", icon: "🛡️" },
-              { text: "24/7 Support", icon: "🎧" }
+              { text: "24/7 Support", icon: "🎧" },
             ].map((badge, index) => (
               <div
                 key={index}
@@ -408,29 +438,50 @@ export default function Index() {
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-white mb-2">Expert Guidance</h3>
-                    <p className="text-gray-200">Our experienced team provides personalized advice to help you make informed decisions about your insurance needs.</p>
+                    <h3 className="font-semibold text-white mb-2">
+                      Expert Guidance
+                    </h3>
+                    <p className="text-gray-200">
+                      Our experienced team provides personalized advice to help
+                      you make informed decisions about your insurance needs.
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-white mb-2">Competitive Rates</h3>
-                    <p className="text-gray-200">We work with leading insurers to offer you the most competitive rates without compromising on coverage quality.</p>
+                    <h3 className="font-semibold text-white mb-2">
+                      Competitive Rates
+                    </h3>
+                    <p className="text-gray-200">
+                      We work with leading insurers to offer you the most
+                      competitive rates without compromising on coverage
+                      quality.
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-white mb-2">24/7 Support</h3>
-                    <p className="text-gray-200">Our dedicated support team is available around the clock to assist you with claims and policy inquiries.</p>
+                    <h3 className="font-semibold text-white mb-2">
+                      24/7 Support
+                    </h3>
+                    <p className="text-gray-200">
+                      Our dedicated support team is available around the clock
+                      to assist you with claims and policy inquiries.
+                    </p>
                   </div>
                 </div>
                 <div className="flex items-start space-x-4">
                   <CheckCircle className="h-6 w-6 text-primary flex-shrink-0 mt-1" />
                   <div>
-                    <h3 className="font-semibold text-white mb-2">Quick Claims Processing</h3>
-                    <p className="text-gray-200">We ensure fast and fair claims processing, so you can get back on your feet as quickly as possible.</p>
+                    <h3 className="font-semibold text-white mb-2">
+                      Quick Claims Processing
+                    </h3>
+                    <p className="text-gray-200">
+                      We ensure fast and fair claims processing, so you can get
+                      back on your feet as quickly as possible.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -444,8 +495,12 @@ export default function Index() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-2xl"></div>
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="bg-gray-800/95 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700/50">
-                  <h3 className="text-xl font-bold text-white mb-2">Ready to Get Protected?</h3>
-                  <p className="text-gray-200 mb-4">Get a personalized insurance quote in minutes.</p>
+                  <h3 className="text-xl font-bold text-white mb-2">
+                    Ready to Get Protected?
+                  </h3>
+                  <p className="text-gray-200 mb-4">
+                    Get a personalized insurance quote in minutes.
+                  </p>
                   <MovingButton asChild variant="primary" size="sm">
                     <Link to="/contact">Get Free Quote</Link>
                   </MovingButton>
@@ -464,23 +519,37 @@ export default function Index() {
               What Our Clients Say
             </h2>
             <p className="text-xl text-gray-200">
-              Don't just take our word for it - hear from our satisfied customers
+              Don't just take our word for it - hear from our satisfied
+              customers
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {testimonials.map((testimonial, index) => (
-              <Card key={index} className="bg-gray-800 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group border border-gray-700/50">
+              <Card
+                key={index}
+                className="bg-gray-800 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 group border border-gray-700/50"
+              >
                 <CardContent className="p-6">
                   <div className="flex items-center mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-5 w-5 text-yellow-400 fill-current group-hover:scale-110 transition-transform duration-300" style={{ animationDelay: `${i * 100}ms` }} />
+                      <Star
+                        key={i}
+                        className="h-5 w-5 text-yellow-400 fill-current group-hover:scale-110 transition-transform duration-300"
+                        style={{ animationDelay: `${i * 100}ms` }}
+                      />
                     ))}
                   </div>
-                  <p className="text-gray-200 mb-4 italic">"{testimonial.content}"</p>
+                  <p className="text-gray-200 mb-4 italic">
+                    "{testimonial.content}"
+                  </p>
                   <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-gray-300 text-sm">{testimonial.role}</div>
+                    <div className="font-semibold text-white">
+                      {testimonial.name}
+                    </div>
+                    <div className="text-gray-300 text-sm">
+                      {testimonial.role}
+                    </div>
                   </div>
                 </CardContent>
               </Card>
@@ -502,7 +571,8 @@ export default function Index() {
               Latest Updates & Insights
             </h2>
             <p className="text-xl text-gray-200 max-w-2xl mx-auto">
-              Stay informed with our latest industry insights, policy updates, and company news.
+              Stay informed with our latest industry insights, policy updates,
+              and company news.
             </p>
           </div>
 
@@ -511,39 +581,46 @@ export default function Index() {
               {
                 category: "Industry News",
                 title: "New Insurance Regulations for 2024",
-                excerpt: "Important updates affecting all insurance policies starting January 2024...",
+                excerpt:
+                  "Important updates affecting all insurance policies starting January 2024...",
                 date: "Dec 15, 2023",
                 readTime: "3 min read",
-                gradient: "from-blue-500/20 to-cyan-500/20"
+                gradient: "from-blue-500/20 to-cyan-500/20",
               },
               {
                 category: "Company Update",
                 title: "AI-Powered Claims Processing Launch",
-                excerpt: "We're revolutionizing claims processing with advanced AI technology...",
+                excerpt:
+                  "We're revolutionizing claims processing with advanced AI technology...",
                 date: "Dec 10, 2023",
                 readTime: "5 min read",
-                gradient: "from-purple-500/20 to-pink-500/20"
+                gradient: "from-purple-500/20 to-pink-500/20",
               },
               {
                 category: "Tips & Advice",
                 title: "5 Ways to Lower Your Insurance Premiums",
-                excerpt: "Expert tips to help you save money while maintaining comprehensive coverage...",
+                excerpt:
+                  "Expert tips to help you save money while maintaining comprehensive coverage...",
                 date: "Dec 5, 2023",
                 readTime: "4 min read",
-                gradient: "from-green-500/20 to-emerald-500/20"
-              }
+                gradient: "from-green-500/20 to-emerald-500/20",
+              },
             ].map((article, index) => (
               <Card
                 key={index}
                 className="group bg-gradient-to-br from-gray-800/60 to-gray-700/40 backdrop-blur-sm border-gray-600/30 hover:border-primary/40 transition-all duration-500 hover:scale-105 hover:-translate-y-2 cursor-pointer overflow-hidden"
               >
-                <div className={`h-2 bg-gradient-to-r ${article.gradient} group-hover:h-3 transition-all duration-300`}></div>
+                <div
+                  className={`h-2 bg-gradient-to-r ${article.gradient} group-hover:h-3 transition-all duration-300`}
+                ></div>
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between mb-3">
                     <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
                       {article.category}
                     </span>
-                    <span className="text-xs text-gray-400">{article.readTime}</span>
+                    <span className="text-xs text-gray-400">
+                      {article.readTime}
+                    </span>
                   </div>
                   <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-2">
                     {article.title}
@@ -552,7 +629,9 @@ export default function Index() {
                     {article.excerpt}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-xs text-gray-400">{article.date}</span>
+                    <span className="text-xs text-gray-400">
+                      {article.date}
+                    </span>
                     <div className="flex items-center text-primary text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">
                       Read More
                       <ArrowRight className="ml-1 h-3 w-3" />
@@ -588,22 +667,42 @@ export default function Index() {
                 Get Started in Minutes
               </h2>
               <p className="text-xl text-gray-200 mb-8">
-                Ready to protect what matters most? Our experts are standing by to help you find the perfect coverage.
+                Ready to protect what matters most? Our experts are standing by
+                to help you find the perfect coverage.
               </p>
 
               <div className="space-y-4 mb-8">
                 {[
-                  { step: "1", action: "Tell us about your needs", time: "30 seconds" },
-                  { step: "2", action: "Get personalized quotes", time: "60 seconds" },
-                  { step: "3", action: "Choose your coverage", time: "5 minutes" }
+                  {
+                    step: "1",
+                    action: "Tell us about your needs",
+                    time: "30 seconds",
+                  },
+                  {
+                    step: "2",
+                    action: "Get personalized quotes",
+                    time: "60 seconds",
+                  },
+                  {
+                    step: "3",
+                    action: "Choose your coverage",
+                    time: "5 minutes",
+                  },
                 ].map((item, index) => (
-                  <div key={index} className="flex items-center space-x-4 group">
+                  <div
+                    key={index}
+                    className="flex items-center space-x-4 group"
+                  >
                     <div className="w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform duration-300">
                       {item.step}
                     </div>
                     <div className="flex-1">
-                      <span className="text-white font-medium">{item.action}</span>
-                      <span className="text-gray-400 text-sm ml-2">({item.time})</span>
+                      <span className="text-white font-medium">
+                        {item.action}
+                      </span>
+                      <span className="text-gray-400 text-sm ml-2">
+                        ({item.time})
+                      </span>
                     </div>
                   </div>
                 ))}
@@ -631,7 +730,9 @@ export default function Index() {
                   <div className="w-3 h-3 bg-red-400 rounded-full"></div>
                   <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-400 rounded-full"></div>
-                  <span className="text-gray-400 text-sm ml-2">Quote Calculator</span>
+                  <span className="text-gray-400 text-sm ml-2">
+                    Quote Calculator
+                  </span>
                 </div>
 
                 <div className="space-y-4">
@@ -649,7 +750,9 @@ export default function Index() {
                   </div>
 
                   <div className="mt-6 p-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg border border-primary/30">
-                    <div className="text-white font-semibold mb-1">Estimated Monthly Premium</div>
+                    <div className="text-white font-semibold mb-1">
+                      Estimated Monthly Premium
+                    </div>
                     <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                       R 299 - R 899
                     </div>
@@ -676,8 +779,8 @@ export default function Index() {
             Ready to Secure Your Future?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Contact us today for a free consultation and discover how we can protect
-            what matters most to you.
+            Contact us today for a free consultation and discover how we can
+            protect what matters most to you.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
             <MovingButton asChild variant="rainbow" size="lg">

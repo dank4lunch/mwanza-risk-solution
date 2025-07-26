@@ -3,24 +3,24 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ScrollArea } from "@/components/ui/scroll-area";
-import { 
-  MessageCircle, 
-  X, 
-  Send, 
-  Bot, 
-  User, 
+import {
+  MessageCircle,
+  X,
+  Send,
+  Bot,
+  User,
   Sparkles,
   Shield,
   Phone,
   Mail,
-  Calculator
+  Calculator,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface Message {
   id: string;
   content: string;
-  sender: 'user' | 'ai';
+  sender: "user" | "ai";
   timestamp: Date;
 }
 
@@ -28,11 +28,12 @@ export default function AIAssistant() {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
-      id: '1',
-      content: "Hi! I'm MIA (Mwanza Insurance Assistant). I'm here to help you with insurance questions, quotes, and guidance. How can I assist you today?",
-      sender: 'ai',
-      timestamp: new Date()
-    }
+      id: "1",
+      content:
+        "Hi! I'm MIA (Mwanza Insurance Assistant). I'm here to help you with insurance questions, quotes, and guidance. How can I assist you today?",
+      sender: "ai",
+      timestamp: new Date(),
+    },
   ]);
   const [inputMessage, setInputMessage] = useState("");
   const [isTyping, setIsTyping] = useState(false);
@@ -55,64 +56,82 @@ export default function AIAssistant() {
 
   const getAIResponse = (userMessage: string): string => {
     const message = userMessage.toLowerCase();
-    
+
     // Insurance-specific responses
-    if (message.includes('quote') || message.includes('price') || message.includes('cost')) {
+    if (
+      message.includes("quote") ||
+      message.includes("price") ||
+      message.includes("cost")
+    ) {
       return "I'd be happy to help you get a quote! For an accurate quote, I'll need some details about what type of insurance you're looking for. You can get an instant quote by calling +27 (0) 11 123 4567 or filling out our contact form. What type of insurance interests you?";
     }
-    
-    if (message.includes('life insurance')) {
+
+    if (message.includes("life insurance")) {
       return "Life insurance is one of our most popular products! We offer term life, whole life, and family income benefit policies starting from R199/month. Life insurance ensures your family's financial security. Would you like me to connect you with a specialist?";
     }
-    
-    if (message.includes('car') || message.includes('vehicle') || message.includes('auto')) {
+
+    if (
+      message.includes("car") ||
+      message.includes("vehicle") ||
+      message.includes("auto")
+    ) {
       return "Our vehicle insurance covers cars, motorcycles, and commercial vehicles with comprehensive coverage starting from R399/month. We offer theft protection, accident coverage, and 24/7 roadside assistance. Need a vehicle insurance quote?";
     }
-    
-    if (message.includes('business')) {
+
+    if (message.includes("business")) {
       return "Business insurance is essential for protecting your company! We cover property, liability, business interruption, and workers compensation starting from R299/month. Our policies are tailored to your specific industry needs.";
     }
-    
-    if (message.includes('claim') || message.includes('claims')) {
+
+    if (message.includes("claim") || message.includes("claims")) {
       return "We make claims processing simple and fast! Most claims are processed within 24 hours. You can file a claim by calling our 24/7 claims hotline at +27 (0) 11 123 4567 or through our online portal. What type of claim do you need help with?";
     }
-    
-    if (message.includes('contact') || message.includes('phone') || message.includes('call')) {
+
+    if (
+      message.includes("contact") ||
+      message.includes("phone") ||
+      message.includes("call")
+    ) {
       return "You can reach us at +27 (0) 11 123 4567 or email info@mwanzarisk.co.za. Our office is located at 123 Business District, Johannesburg. We're open Mon-Fri 8AM-6PM, Sat 9AM-2PM. How else can I help you?";
     }
-    
-    if (message.includes('medical') || message.includes('health')) {
+
+    if (message.includes("medical") || message.includes("health")) {
       return "Our medical aid plans provide comprehensive healthcare coverage including hospital cover, medical expenses, chronic medication, and preventive care starting from R799/month. We work with top medical providers across South Africa.";
     }
-    
-    if (message.includes('agricultural') || message.includes('farm')) {
+
+    if (message.includes("agricultural") || message.includes("farm")) {
       return "Agricultural insurance protects farmers against crop failure, livestock loss, and weather damage starting from R599/month. We cover crop insurance, livestock protection, farm property, and equipment. Perfect for protecting your farming investments!";
     }
-    
-    if (message.includes('funeral')) {
+
+    if (message.includes("funeral")) {
       return "Our funeral cover provides dignified farewell arrangements starting from just R99/month. This includes burial expenses, memorial services, family support, and repatriation cover. It's one of our most affordable yet important policies.";
     }
-    
-    if (message.includes('hello') || message.includes('hi') || message.includes('hey')) {
+
+    if (
+      message.includes("hello") ||
+      message.includes("hi") ||
+      message.includes("hey")
+    ) {
       return "Hello! Welcome to Mwanza Risk Solutions. I'm here to help you with all your insurance needs. We've been protecting South African families and businesses for over 20 years. What can I help you with today?";
     }
-    
-    if (message.includes('help') || message.includes('support')) {
+
+    if (message.includes("help") || message.includes("support")) {
       return "I'm here to help! I can assist you with:\n• Getting insurance quotes\n• Explaining our insurance products\n• Filing claims\n• Finding contact information\n• Scheduling consultations\n\nWhat specific help do you need?";
     }
-    
-    if (message.includes('thank') || message.includes('thanks')) {
+
+    if (message.includes("thank") || message.includes("thanks")) {
       return "You're very welcome! I'm always here to help with your insurance needs. If you need anything else or want to speak with one of our human experts, just let me know. Have a great day! 😊";
     }
-    
+
     // Default responses
     const defaultResponses = [
       "That's a great question! For detailed information about that topic, I'd recommend speaking with one of our insurance specialists. You can reach them at +27 (0) 11 123 4567. Is there anything else I can help you with?",
       "I want to make sure I give you the most accurate information. For that specific query, our expert team can provide detailed guidance. Feel free to call +27 (0) 11 123 4567 or fill out our contact form. What else can I help you with?",
       "Thanks for your question! For comprehensive assistance with that, I'd suggest contacting our experienced team directly. They're available at +27 (0) 11 123 4567. Is there anything else about our insurance services I can help explain?",
     ];
-    
-    return defaultResponses[Math.floor(Math.random() * defaultResponses.length)];
+
+    return defaultResponses[
+      Math.floor(Math.random() * defaultResponses.length)
+    ];
   };
 
   const handleSendMessage = async () => {
@@ -121,40 +140,51 @@ export default function AIAssistant() {
     const userMessage: Message = {
       id: Date.now().toString(),
       content: inputMessage,
-      sender: 'user',
-      timestamp: new Date()
+      sender: "user",
+      timestamp: new Date(),
     };
 
-    setMessages(prev => [...prev, userMessage]);
+    setMessages((prev) => [...prev, userMessage]);
     setInputMessage("");
     setIsTyping(true);
 
     // Simulate AI thinking time
-    setTimeout(() => {
-      const aiResponse: Message = {
-        id: (Date.now() + 1).toString(),
-        content: getAIResponse(inputMessage),
-        sender: 'ai',
-        timestamp: new Date()
-      };
-      
-      setMessages(prev => [...prev, aiResponse]);
-      setIsTyping(false);
-    }, 1000 + Math.random() * 2000);
+    setTimeout(
+      () => {
+        const aiResponse: Message = {
+          id: (Date.now() + 1).toString(),
+          content: getAIResponse(inputMessage),
+          sender: "ai",
+          timestamp: new Date(),
+        };
+
+        setMessages((prev) => [...prev, aiResponse]);
+        setIsTyping(false);
+      },
+      1000 + Math.random() * 2000,
+    );
   };
 
   const handleKeyPress = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter' && !e.shiftKey) {
+    if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault();
       handleSendMessage();
     }
   };
 
   const quickActions = [
-    { icon: Calculator, text: "Get Quote", action: "I need an insurance quote" },
+    {
+      icon: Calculator,
+      text: "Get Quote",
+      action: "I need an insurance quote",
+    },
     { icon: Shield, text: "File Claim", action: "I need help filing a claim" },
     { icon: Phone, text: "Contact Info", action: "How can I contact you?" },
-    { icon: Mail, text: "Services", action: "What insurance services do you offer?" }
+    {
+      icon: Mail,
+      text: "Services",
+      action: "What insurance services do you offer?",
+    },
   ];
 
   return (
@@ -189,8 +219,12 @@ export default function AIAssistant() {
                     <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-gray-800 animate-pulse"></div>
                   </div>
                   <div>
-                    <CardTitle className="text-white text-lg">MIA Assistant</CardTitle>
-                    <p className="text-xs text-gray-300">Mwanza Insurance AI • Online</p>
+                    <CardTitle className="text-white text-lg">
+                      MIA Assistant
+                    </CardTitle>
+                    <p className="text-xs text-gray-300">
+                      Mwanza Insurance AI • Online
+                    </p>
                   </div>
                 </div>
                 <Button
@@ -213,37 +247,42 @@ export default function AIAssistant() {
                       key={message.id}
                       className={cn(
                         "flex gap-3 animate-slide-in-left",
-                        message.sender === 'user' ? "justify-end" : "justify-start"
+                        message.sender === "user"
+                          ? "justify-end"
+                          : "justify-start",
                       )}
                     >
-                      {message.sender === 'ai' && (
+                      {message.sender === "ai" && (
                         <div className="w-8 h-8 bg-gradient-to-r from-primary to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
                           <Bot className="h-4 w-4 text-white" />
                         </div>
                       )}
-                      
+
                       <div
                         className={cn(
                           "max-w-[80%] rounded-2xl px-4 py-2 text-sm",
-                          message.sender === 'user'
+                          message.sender === "user"
                             ? "bg-gradient-to-r from-primary to-blue-600 text-white"
-                            : "bg-gray-700/50 text-gray-100 border border-gray-600/30"
+                            : "bg-gray-700/50 text-gray-100 border border-gray-600/30",
                         )}
                       >
                         <p className="whitespace-pre-wrap">{message.content}</p>
                         <div className="text-xs opacity-60 mt-1">
-                          {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                          {message.timestamp.toLocaleTimeString([], {
+                            hour: "2-digit",
+                            minute: "2-digit",
+                          })}
                         </div>
                       </div>
 
-                      {message.sender === 'user' && (
+                      {message.sender === "user" && (
                         <div className="w-8 h-8 bg-gradient-to-r from-gray-600 to-gray-700 rounded-full flex items-center justify-center flex-shrink-0">
                           <User className="h-4 w-4 text-white" />
                         </div>
                       )}
                     </div>
                   ))}
-                  
+
                   {isTyping && (
                     <div className="flex gap-3 animate-slide-in-left">
                       <div className="w-8 h-8 bg-gradient-to-r from-primary to-purple-500 rounded-full flex items-center justify-center flex-shrink-0">
