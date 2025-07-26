@@ -474,6 +474,182 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Latest Updates Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900/10 to-purple-900/10 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-indigo-400/15 to-cyan-400/15 rounded-full blur-3xl animate-pulse delay-500"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-gradient-to-r from-pink-400/15 to-purple-400/15 rounded-full blur-3xl animate-float delay-1000"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              Latest Updates & Insights
+            </h2>
+            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
+              Stay informed with our latest industry insights, policy updates, and company news.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {[
+              {
+                category: "Industry News",
+                title: "New Insurance Regulations for 2024",
+                excerpt: "Important updates affecting all insurance policies starting January 2024...",
+                date: "Dec 15, 2023",
+                readTime: "3 min read",
+                gradient: "from-blue-500/20 to-cyan-500/20"
+              },
+              {
+                category: "Company Update",
+                title: "AI-Powered Claims Processing Launch",
+                excerpt: "We're revolutionizing claims processing with advanced AI technology...",
+                date: "Dec 10, 2023",
+                readTime: "5 min read",
+                gradient: "from-purple-500/20 to-pink-500/20"
+              },
+              {
+                category: "Tips & Advice",
+                title: "5 Ways to Lower Your Insurance Premiums",
+                excerpt: "Expert tips to help you save money while maintaining comprehensive coverage...",
+                date: "Dec 5, 2023",
+                readTime: "4 min read",
+                gradient: "from-green-500/20 to-emerald-500/20"
+              }
+            ].map((article, index) => (
+              <Card
+                key={index}
+                className="group bg-gradient-to-br from-gray-800/60 to-gray-700/40 backdrop-blur-sm border-gray-600/30 hover:border-primary/40 transition-all duration-500 hover:scale-105 hover:-translate-y-2 cursor-pointer overflow-hidden"
+              >
+                <div className={`h-2 bg-gradient-to-r ${article.gradient} group-hover:h-3 transition-all duration-300`}></div>
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="text-xs font-medium text-primary bg-primary/10 px-2 py-1 rounded-full">
+                      {article.category}
+                    </span>
+                    <span className="text-xs text-gray-400">{article.readTime}</span>
+                  </div>
+                  <h3 className="text-lg font-semibold text-white mb-3 group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                    {article.title}
+                  </h3>
+                  <p className="text-gray-200 text-sm mb-4 line-clamp-3 group-hover:text-gray-100 transition-colors duration-300">
+                    {article.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-gray-400">{article.date}</span>
+                    <div className="flex items-center text-primary text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">
+                      Read More
+                      <ArrowRight className="ml-1 h-3 w-3" />
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <MovingButton asChild variant="outline" size="lg">
+              <Link to="/news">
+                View All Updates
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
+            </MovingButton>
+          </div>
+        </div>
+      </section>
+
+      {/* Interactive Contact Preview */}
+      <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900 relative overflow-hidden">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_70%)]"></div>
+          <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_70%)]"></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-4xl font-bold text-white mb-6">
+                Get Started in Minutes
+              </h2>
+              <p className="text-xl text-gray-200 mb-8">
+                Ready to protect what matters most? Our experts are standing by to help you find the perfect coverage.
+              </p>
+
+              <div className="space-y-4 mb-8">
+                {[
+                  { step: "1", action: "Tell us about your needs", time: "30 seconds" },
+                  { step: "2", action: "Get personalized quotes", time: "60 seconds" },
+                  { step: "3", action: "Choose your coverage", time: "5 minutes" }
+                ].map((item, index) => (
+                  <div key={index} className="flex items-center space-x-4 group">
+                    <div className="w-8 h-8 bg-gradient-to-r from-primary to-accent rounded-full flex items-center justify-center text-white font-bold text-sm group-hover:scale-110 transition-transform duration-300">
+                      {item.step}
+                    </div>
+                    <div className="flex-1">
+                      <span className="text-white font-medium">{item.action}</span>
+                      <span className="text-gray-400 text-sm ml-2">({item.time})</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4">
+                <MovingButton asChild variant="primary" size="lg">
+                  <Link to="/contact">
+                    Start Your Quote
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </MovingButton>
+                <MovingButton asChild variant="outline" size="lg">
+                  <a href="tel:+27111234567">
+                    <Phone className="mr-2 h-5 w-5" />
+                    Call Expert
+                  </a>
+                </MovingButton>
+              </div>
+            </div>
+
+            <div className="relative">
+              <div className="bg-gradient-to-br from-gray-700/60 to-gray-800/60 backdrop-blur-sm rounded-2xl p-8 border border-gray-600/30 shadow-2xl">
+                <div className="flex items-center space-x-3 mb-6">
+                  <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                  <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                  <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                  <span className="text-gray-400 text-sm ml-2">Quote Calculator</span>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="animate-pulse">
+                    <div className="h-4 bg-gray-600 rounded w-3/4 mb-2"></div>
+                    <div className="h-8 bg-gray-700 rounded"></div>
+                  </div>
+                  <div className="animate-pulse delay-300">
+                    <div className="h-4 bg-gray-600 rounded w-1/2 mb-2"></div>
+                    <div className="h-8 bg-gray-700 rounded"></div>
+                  </div>
+                  <div className="animate-pulse delay-500">
+                    <div className="h-4 bg-gray-600 rounded w-2/3 mb-2"></div>
+                    <div className="h-8 bg-gray-700 rounded"></div>
+                  </div>
+
+                  <div className="mt-6 p-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-lg border border-primary/30">
+                    <div className="text-white font-semibold mb-1">Estimated Monthly Premium</div>
+                    <div className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                      R 299 - R 899
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full flex items-center justify-center shadow-lg animate-pulse">
+                <span className="text-white font-bold text-sm">SAVE</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-20 bg-gradient-to-br from-primary via-blue-600 to-purple-700 relative overflow-hidden">
         <div className="absolute inset-0">
