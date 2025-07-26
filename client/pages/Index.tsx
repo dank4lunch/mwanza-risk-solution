@@ -316,6 +316,71 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Trust Indicators Section */}
+      <section className="py-20 bg-gradient-to-br from-gray-800 via-gray-900 to-black relative overflow-hidden">
+        <div className="absolute inset-0">
+          {/* Animated grid pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,black_70%,transparent_110%)] animate-pulse"></div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-conic from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-spin" style={{ animationDuration: '20s' }}></div>
+        </div>
+
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-4">
+              Trusted by Industry Leaders
+            </h2>
+            <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+              Join thousands of satisfied customers who trust us with their most valuable assets.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            {[
+              { label: "Insurance Licenses", value: "15+", icon: "📋" },
+              { label: "Partner Networks", value: "50+", icon: "🤝" },
+              { label: "Countries Served", value: "12", icon: "🌍" },
+              { label: "Claims Success Rate", value: "99.2%", icon: "✅" }
+            ].map((stat, index) => (
+              <div key={index} className="text-center group">
+                <div className="relative bg-gradient-to-br from-gray-700/50 to-gray-800/50 backdrop-blur-sm rounded-2xl p-6 border border-gray-600/30 group-hover:border-primary/50 transition-all duration-500 group-hover:scale-110 group-hover:-translate-y-1">
+                  <div className="text-3xl mb-3 group-hover:scale-125 transition-transform duration-300">
+                    {stat.icon}
+                  </div>
+                  <div className="text-3xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2 group-hover:scale-110 transition-transform duration-300">
+                    {stat.value}
+                  </div>
+                  <div className="text-gray-300 text-sm font-medium">{stat.label}</div>
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Floating badges */}
+          <div className="flex flex-wrap justify-center gap-6">
+            {[
+              { text: "ISO 27001 Certified", icon: "🔒" },
+              { text: "A+ BBB Rating", icon: "⭐" },
+              { text: "PCI DSS Compliant", icon: "🛡️" },
+              { text: "24/7 Support", icon: "🎧" }
+            ].map((badge, index) => (
+              <div
+                key={index}
+                className="group flex items-center space-x-2 bg-gradient-to-r from-gray-700/60 to-gray-600/40 backdrop-blur-sm px-4 py-2 rounded-full border border-gray-500/30 hover:border-primary/50 transition-all duration-300 hover:scale-105 hover:-translate-y-1 cursor-pointer"
+                style={{ animationDelay: `${index * 150}ms` }}
+              >
+                <span className="text-lg group-hover:scale-110 transition-transform duration-300">
+                  {badge.icon}
+                </span>
+                <span className="text-white text-sm font-medium group-hover:text-primary transition-colors duration-300">
+                  {badge.text}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why Choose Us */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
