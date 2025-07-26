@@ -186,13 +186,13 @@ export default function About() {
       </section>
 
       {/* Company Timeline */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50/50 dark:from-gray-800 dark:to-blue-900/10">
+      <section className="py-20 bg-gradient-to-br from-gray-800 to-blue-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
+            <h2 className="text-4xl font-bold text-white mb-4">
               Our Journey
             </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-200 max-w-2xl mx-auto">
               Two decades of growth, innovation, and unwavering commitment to our clients.
             </p>
           </div>
