@@ -139,20 +139,20 @@ export default function Contact() {
       </section>
 
       {/* Contact Information Cards */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {contactInfo.map((info, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer" 
+              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer bg-gray-800/50 border-gray-700/50"
                     onClick={() => info.action !== "#" && window.open(info.action, "_self")}>
                 <CardContent className="p-6 text-center">
                   <div className="bg-gradient-to-br from-primary/10 to-purple-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <info.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">{info.title}</h3>
+                  <h3 className="text-lg font-semibold text-white mb-3">{info.title}</h3>
                   <div className="space-y-1">
                     {info.details.map((detail, idx) => (
-                      <p key={idx} className="text-gray-600 dark:text-gray-300 text-sm">{detail}</p>
+                      <p key={idx} className="text-gray-200 text-sm">{detail}</p>
                     ))}
                   </div>
                 </CardContent>
@@ -163,7 +163,7 @@ export default function Contact() {
       </section>
 
       {/* Main Contact Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50/50 dark:from-gray-800 dark:to-blue-900/10">
+      <section className="py-20 bg-gradient-to-br from-gray-800 to-blue-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             
