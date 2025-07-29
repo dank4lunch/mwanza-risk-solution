@@ -103,7 +103,7 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-brand-navy-dark via-brand-navy to-brand-navy-light">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           {/* Main gradient orbs */}
