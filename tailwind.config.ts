@@ -59,7 +59,7 @@ export default {
         },
         brand: {
           navy: "#1e3a8a",
-          blue: "#3b82f6",
+          blue: "#2563eb",
           gold: "#f59e0b",
           slate: "#64748b",
         },
