@@ -120,7 +120,7 @@ export default function Index() {
             }}
           />
           <div
-            className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-brand-gold-light/15 via-brand-gold/20 to-brand-gold-dark/15 rounded-full blur-2xl animate-float delay-500"
+            className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-brand-blue-light/15 via-brand-blue/20 to-brand-blue-dark/15 rounded-full blur-2xl animate-float delay-500"
             style={{
               transform: `translate(-50%, -50%) translateY(${scrollY * 0.2}px) rotate(${scrollY * 0.05}deg)`,
             }}
