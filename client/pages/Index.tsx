@@ -108,19 +108,19 @@ export default function Index() {
         <div className="absolute inset-0">
           {/* Main gradient orbs */}
           <div
-            className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/30 via-purple-500/20 to-pink-500/30 rounded-full blur-3xl animate-float"
+            className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-brand-gold/20 via-brand-gold-light/15 to-brand-gold-dark/20 rounded-full blur-3xl animate-float"
             style={{
               transform: `translateY(${scrollY * 0.5}px) rotate(${scrollY * 0.1}deg)`,
             }}
           />
           <div
-            className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-cyan-400/25 via-blue-500/20 to-purple-600/25 rounded-full blur-3xl animate-pulse delay-1000"
+            className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-brand-navy-light/25 via-brand-navy/20 to-brand-navy-dark/25 rounded-full blur-3xl animate-pulse delay-1000"
             style={{
               transform: `translateY(${scrollY * -0.3}px) rotate(${scrollY * -0.1}deg)`,
             }}
           />
           <div
-            className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-yellow-400/20 via-orange-500/15 to-red-500/20 rounded-full blur-2xl animate-float delay-500"
+            className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-brand-gold-light/15 via-brand-gold/20 to-brand-gold-dark/15 rounded-full blur-2xl animate-float delay-500"
             style={{
               transform: `translate(-50%, -50%) translateY(${scrollY * 0.2}px) rotate(${scrollY * 0.05}deg)`,
             }}
