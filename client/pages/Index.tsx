@@ -108,7 +108,7 @@ export default function Index() {
         <div className="absolute inset-0">
           {/* Main gradient orbs */}
           <div
-            className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-brand-gold/20 via-brand-gold-light/15 to-brand-gold-dark/20 rounded-full blur-3xl animate-float"
+            className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-brand-blue/20 via-brand-blue-light/15 to-brand-blue-dark/20 rounded-full blur-3xl animate-float"
             style={{
               transform: `translateY(${scrollY * 0.5}px) rotate(${scrollY * 0.1}deg)`,
             }}
