@@ -131,7 +131,7 @@ export default function Index() {
             {[...Array(20)].map((_, i) => (
               <div
                 key={i}
-                className={`absolute w-2 h-2 bg-gradient-to-r from-brand-gold to-brand-gold-light rounded-full animate-particle opacity-60`}
+                className={`absolute w-2 h-2 bg-gradient-to-r from-brand-blue to-brand-blue-light rounded-full animate-particle opacity-60`}
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
@@ -145,7 +145,7 @@ export default function Index() {
             {[...Array(6)].map((_, i) => (
               <div
                 key={`large-${i}`}
-                className={`absolute w-1 h-1 bg-gradient-to-r from-brand-gold-light to-brand-gold rounded-full animate-float opacity-40`}
+                className={`absolute w-1 h-1 bg-gradient-to-r from-brand-blue-light to-brand-blue rounded-full animate-float opacity-40`}
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
