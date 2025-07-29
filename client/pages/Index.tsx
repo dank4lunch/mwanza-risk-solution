@@ -775,10 +775,10 @@ export default function Index() {
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-300/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-4xl font-bold text-brand-navy mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Secure Your Future?
           </h2>
-          <p className="text-xl text-brand-navy-light mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
             Contact us today for a free consultation and discover how we can
             protect what matters most to you.
           </p>
