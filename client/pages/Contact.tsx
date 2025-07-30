@@ -373,7 +373,11 @@ export default function Contact() {
                 <CardContent className="p-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     {quickServices.map((service, index) => (
-                      <div key={index} className="group p-4 rounded-xl bg-gradient-to-br from-gray-50 to-blue-50/50 dark:from-gray-800/50 dark:to-blue-900/10 hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105">
+                      <div
+                        key={index}
+                        onClick={service.action}
+                        className="group p-4 rounded-xl bg-gradient-to-br from-gray-50 to-blue-50/50 dark:from-gray-800/50 dark:to-blue-900/10 hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105"
+                      >
                         <service.icon className={`h-8 w-8 ${service.color} mb-3 group-hover:scale-110 transition-transform duration-300`} />
                         <h4 className="font-semibold text-gray-900 dark:text-white mb-2">{service.title}</h4>
                         <p className="text-sm text-gray-600 dark:text-gray-300">{service.description}</p>
