@@ -21,15 +21,11 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-700/60 backdrop-blur-sm rounded-xl p-3 shadow-lg shadow-blue-500/20 transition-all duration-300 group-hover:shadow-blue-500/40 group-hover:scale-105 group-hover:-translate-y-0.5 border border-gray-600/30 group-hover:border-blue-400/30">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F8da1c807f86140519b745a7f486c5b46?format=webp&width=200"
-                alt="Mwanza Risk Solutions"
-                className="h-10 w-auto transition-all duration-300 group-hover:scale-105 relative z-10"
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/5 to-transparent rounded-xl group-hover:from-blue-500/20 group-hover:via-purple-500/10 transition-all duration-300"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-xl group-hover:from-white/10 transition-all duration-300"></div>
-            </div>
+            <img
+              src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F8da1c807f86140519b745a7f486c5b46?format=webp&width=200"
+              alt="Mwanza Risk Solutions"
+              className="h-12 w-auto transition-all duration-300 group-hover:scale-105"
+            />
           </Link>
 
           {/* Desktop Navigation */}
