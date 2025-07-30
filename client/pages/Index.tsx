@@ -356,7 +356,7 @@ export default function Index() {
       </section>
 
       {/* Trust Indicators Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-800 via-gray-900 to-black relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-brand-navy-dark via-brand-navy to-brand-navy-light relative overflow-hidden">
         <div className="absolute inset-0">
           {/* Animated grid pattern */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,black_70%,transparent_110%)] animate-pulse"></div>
