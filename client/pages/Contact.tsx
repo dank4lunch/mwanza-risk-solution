@@ -36,25 +36,57 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        subject: "",
-        insuranceType: "",
-        message: ""
+
+    try {
+      // Try to submit to backend API
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
       });
-    }, 3000);
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        // Reset form after 3 seconds
+        setTimeout(() => {
+          setIsSubmitted(false);
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            subject: "",
+            insuranceType: "",
+            message: ""
+          });
+        }, 3000);
+      } else {
+        // Fallback: create mailto link with form data
+        const subject = encodeURIComponent(`Contact Form: ${formData.subject}`);
+        const body = encodeURIComponent(
+          `Name: ${formData.name}\n` +
+          `Email: ${formData.email}\n` +
+          `Phone: ${formData.phone}\n` +
+          `Insurance Type: ${formData.insuranceType}\n\n` +
+          `Message:\n${formData.message}`
+        );
+        window.location.href = `mailto:info@mrsolution.co.za?subject=${subject}&body=${body}`;
+      }
+    } catch (error) {
+      // Fallback: create mailto link with form data
+      const subject = encodeURIComponent(`Contact Form: ${formData.subject}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Phone: ${formData.phone}\n` +
+        `Insurance Type: ${formData.insuranceType}\n\n` +
+        `Message:\n${formData.message}`
+      );
+      window.location.href = `mailto:info@mrsolution.co.za?subject=${subject}&body=${body}`;
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleInputChange = (field: string, value: string) => {
