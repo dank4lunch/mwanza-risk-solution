@@ -1,5 +1,13 @@
 import { Link } from "react-router-dom";
-import { Shield, Phone, Mail, MapPin, Facebook, Twitter, Linkedin } from "lucide-react";
+import {
+  Shield,
+  Phone,
+  Mail,
+  MapPin,
+  Facebook,
+  Twitter,
+  Linkedin,
+} from "lucide-react";
 
 export default function Footer() {
   return (
@@ -14,12 +22,14 @@ export default function Footer() {
               </div>
               <div>
                 <div className="font-bold text-lg">Mwanza Risk Solutions</div>
-                <div className="text-sm text-gray-400">Your Partners in Personal Insurance</div>
+                <div className="text-sm text-gray-400">
+                  Your Partners in Personal Insurance
+                </div>
               </div>
             </div>
             <p className="text-gray-400 text-sm">
-              With over 20 years of experience, we provide comprehensive insurance solutions
-              to protect what matters most to you.
+              With over 20 years of experience, we provide comprehensive
+              insurance solutions to protect what matters most to you.
             </p>
           </div>
 
@@ -27,16 +37,28 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
             <div className="space-y-2">
-              <Link to="/" className="block text-gray-400 hover:text-white transition-colors">
+              <Link
+                to="/"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
                 Home
               </Link>
-              <Link to="/services" className="block text-gray-400 hover:text-white transition-colors">
+              <Link
+                to="/services"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
                 Services
               </Link>
-              <Link to="/about" className="block text-gray-400 hover:text-white transition-colors">
+              <Link
+                to="/about"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
                 About Us
               </Link>
-              <Link to="/contact" className="block text-gray-400 hover:text-white transition-colors">
+              <Link
+                to="/contact"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
                 Contact
               </Link>
             </div>
@@ -46,12 +68,42 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Our Services</h3>
             <div className="space-y-2 text-sm">
-              <Link to="/services" className="block text-gray-400 hover:text-white transition-colors">Personal Lines Insurance</Link>
-              <Link to="/services" className="block text-gray-400 hover:text-white transition-colors">Commercial Insurance</Link>
-              <Link to="/services" className="block text-gray-400 hover:text-white transition-colors">Liability Insurance</Link>
-              <Link to="/services" className="block text-gray-400 hover:text-white transition-colors">Uber & E-Hailing Insurance</Link>
-              <Link to="/services" className="block text-gray-400 hover:text-white transition-colors">Contractors All Risks</Link>
-              <Link to="/services" className="block text-gray-400 hover:text-white transition-colors">Plant All Risks Insurance</Link>
+              <Link
+                to="/services"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                Personal Lines Insurance
+              </Link>
+              <Link
+                to="/services"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                Commercial Insurance
+              </Link>
+              <Link
+                to="/services"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                Liability Insurance
+              </Link>
+              <Link
+                to="/services"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                Uber & E-Hailing Insurance
+              </Link>
+              <Link
+                to="/services"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                Contractors All Risks
+              </Link>
+              <Link
+                to="/services"
+                className="block text-gray-400 hover:text-white transition-colors"
+              >
+                Plant All Risks Insurance
+              </Link>
             </div>
           </div>
 
@@ -62,18 +114,39 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-primary" />
                 <div className="text-gray-400 text-sm">
-                  <a href="tel:0878026266" className="block hover:text-white transition-colors">087 802 6266</a>
-                  <a href="tel:0825604131" className="block hover:text-white transition-colors">082 560 4131</a>
+                  <a
+                    href="tel:0878026266"
+                    className="block hover:text-white transition-colors"
+                  >
+                    087 802 6266
+                  </a>
+                  <a
+                    href="tel:0825604131"
+                    className="block hover:text-white transition-colors"
+                  >
+                    082 560 4131
+                  </a>
                 </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-primary" />
-                <a href="mailto:info@mrsolution.co.za" className="text-gray-400 text-sm hover:text-white transition-colors">info@mrsolution.co.za</a>
+                <a
+                  href="mailto:info@mrsolution.co.za"
+                  className="text-gray-400 text-sm hover:text-white transition-colors"
+                >
+                  info@mrsolution.co.za
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-primary" />
-                <a href="https://maps.google.com/?q=57+6th+Road,+Hyde+Park,+Sandton+2196" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm hover:text-white transition-colors">
-                  57 6th Road, Hyde Park<br />
+                <a
+                  href="https://maps.google.com/?q=57+6th+Road,+Hyde+Park,+Sandton+2196"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-gray-400 text-sm hover:text-white transition-colors"
+                >
+                  57 6th Road, Hyde Park
+                  <br />
                   Sandton 2196, South Africa
                 </a>
               </div>
@@ -81,13 +154,28 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="flex items-center space-x-4 mt-6">
-              <a href="https://facebook.com/mwanzarisksolution" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
+              <a
+                href="https://facebook.com/mwanzarisksolution"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary transition-colors"
+              >
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="https://twitter.com/mwanzarisk" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
+              <a
+                href="https://twitter.com/mwanzarisk"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary transition-colors"
+              >
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="https://linkedin.com/company/mwanza-risk-solution" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
+              <a
+                href="https://linkedin.com/company/mwanza-risk-solution"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary transition-colors"
+              >
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
@@ -103,7 +191,9 @@ export default function Footer() {
               <button
                 onClick={() => {
                   const subject = encodeURIComponent("Privacy Policy Request");
-                  const body = encodeURIComponent("I would like to receive a copy of your Privacy Policy.");
+                  const body = encodeURIComponent(
+                    "I would like to receive a copy of your Privacy Policy.",
+                  );
                   window.location.href = `mailto:info@mrsolution.co.za?subject=${subject}&body=${body}`;
                 }}
                 className="text-gray-400 hover:text-white text-sm transition-colors"
@@ -112,8 +202,12 @@ export default function Footer() {
               </button>
               <button
                 onClick={() => {
-                  const subject = encodeURIComponent("Terms of Service Request");
-                  const body = encodeURIComponent("I would like to receive a copy of your Terms of Service.");
+                  const subject = encodeURIComponent(
+                    "Terms of Service Request",
+                  );
+                  const body = encodeURIComponent(
+                    "I would like to receive a copy of your Terms of Service.",
+                  );
                   window.location.href = `mailto:info@mrsolution.co.za?subject=${subject}&body=${body}`;
                 }}
                 className="text-gray-400 hover:text-white text-sm transition-colors"

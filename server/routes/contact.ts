@@ -17,7 +17,7 @@ export const handleContactForm: RequestHandler = async (req, res) => {
   try {
     // Validate the request body
     const validatedData = ContactFormSchema.parse(req.body);
-    
+
     // Log the contact form submission (in production, you'd save to database)
     console.log("Contact form submission:", {
       timestamp: new Date().toISOString(),
@@ -31,22 +31,22 @@ export const handleContactForm: RequestHandler = async (req, res) => {
     // 4. Send auto-reply email to customer
 
     // For now, we'll just simulate processing
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 1000));
 
     // Send success response
     res.json({
       success: true,
-      message: "Thank you for your message. We'll get back to you within 24 hours.",
+      message:
+        "Thank you for your message. We'll get back to you within 24 hours.",
       data: {
         name: validatedData.name,
         email: validatedData.email,
         submittedAt: new Date().toISOString(),
-      }
+      },
     });
-
   } catch (error) {
     console.error("Contact form error:", error);
-    
+
     if (error instanceof z.ZodError) {
       return res.status(400).json({
         success: false,

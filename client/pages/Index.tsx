@@ -34,13 +34,15 @@ export default function Index() {
     {
       icon: Building,
       title: "Personal Lines Insurance",
-      description: "Protect your home, automobile, and personal items from unexpected catastrophes",
+      description:
+        "Protect your home, automobile, and personal items from unexpected catastrophes",
       color: "text-blue-600",
     },
     {
       icon: Heart,
       title: "Commercial Insurance",
-      description: "Comprehensive business protection for property, liability, and operations",
+      description:
+        "Comprehensive business protection for property, liability, and operations",
       color: "text-green-600",
     },
     {
@@ -58,13 +60,15 @@ export default function Index() {
     {
       icon: Cross,
       title: "Contractors All Risks",
-      description: "Complete coverage for construction sites and contractor operations",
+      description:
+        "Complete coverage for construction sites and contractor operations",
       color: "text-orange-600",
     },
     {
       icon: UserCheck,
       title: "Plant All Risks Insurance",
-      description: "Comprehensive protection for construction plant and equipment",
+      description:
+        "Comprehensive protection for construction plant and equipment",
       color: "text-cyan-600",
     },
   ];

@@ -6,19 +6,25 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { 
-  Phone, 
-  Mail, 
-  MapPin, 
-  Clock, 
-  Send, 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
+  Phone,
+  Mail,
+  MapPin,
+  Clock,
+  Send,
   Shield,
   MessageCircle,
   Users,
   Calendar,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
 } from "lucide-react";
 
 export default function Contact() {
@@ -28,7 +34,7 @@ export default function Contact() {
     phone: "",
     subject: "",
     insuranceType: "",
-    message: ""
+    message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -39,10 +45,10 @@ export default function Contact() {
 
     try {
       // Try to submit to backend API
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(formData),
       });
@@ -58,7 +64,7 @@ export default function Contact() {
             phone: "",
             subject: "",
             insuranceType: "",
-            message: ""
+            message: "",
           });
         }, 3000);
       } else {
@@ -66,10 +72,10 @@ export default function Contact() {
         const subject = encodeURIComponent(`Contact Form: ${formData.subject}`);
         const body = encodeURIComponent(
           `Name: ${formData.name}\n` +
-          `Email: ${formData.email}\n` +
-          `Phone: ${formData.phone}\n` +
-          `Insurance Type: ${formData.insuranceType}\n\n` +
-          `Message:\n${formData.message}`
+            `Email: ${formData.email}\n` +
+            `Phone: ${formData.phone}\n` +
+            `Insurance Type: ${formData.insuranceType}\n\n` +
+            `Message:\n${formData.message}`,
         );
         window.location.href = `mailto:info@mrsolution.co.za?subject=${subject}&body=${body}`;
       }
@@ -78,10 +84,10 @@ export default function Contact() {
       const subject = encodeURIComponent(`Contact Form: ${formData.subject}`);
       const body = encodeURIComponent(
         `Name: ${formData.name}\n` +
-        `Email: ${formData.email}\n` +
-        `Phone: ${formData.phone}\n` +
-        `Insurance Type: ${formData.insuranceType}\n\n` +
-        `Message:\n${formData.message}`
+          `Email: ${formData.email}\n` +
+          `Phone: ${formData.phone}\n` +
+          `Insurance Type: ${formData.insuranceType}\n\n` +
+          `Message:\n${formData.message}`,
       );
       window.location.href = `mailto:info@mrsolution.co.za?subject=${subject}&body=${body}`;
     } finally {
@@ -90,7 +96,7 @@ export default function Contact() {
   };
 
   const handleInputChange = (field: string, value: string) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   const contactInfo = [
@@ -98,26 +104,30 @@ export default function Contact() {
       icon: Phone,
       title: "Phone",
       details: ["087 802 6266", "082 560 4131"],
-      action: "tel:0878026266"
+      action: "tel:0878026266",
     },
     {
       icon: Mail,
       title: "Email",
       details: ["info@mrsolution.co.za"],
-      action: "mailto:info@mrsolution.co.za"
+      action: "mailto:info@mrsolution.co.za",
     },
     {
       icon: MapPin,
       title: "Address",
       details: ["57 6th Road, Hyde Park", "Sandton 2196", "South Africa"],
-      action: "https://maps.google.com/?q=57+6th+Road,+Hyde+Park,+Sandton+2196"
+      action: "https://maps.google.com/?q=57+6th+Road,+Hyde+Park,+Sandton+2196",
     },
     {
       icon: Clock,
       title: "Business Hours",
-      details: ["Mon - Fri: 8:00 AM - 5:00 PM", "Sat: 9:00 AM - 1:00 PM", "Sun: Closed"],
-      action: "#"
-    }
+      details: [
+        "Mon - Fri: 8:00 AM - 5:00 PM",
+        "Sat: 9:00 AM - 1:00 PM",
+        "Sun: Closed",
+      ],
+      action: "#",
+    },
   ];
 
   const quickServices = [
@@ -127,9 +137,13 @@ export default function Contact() {
       description: "Receive a personalized insurance quote within 24 hours",
       color: "text-blue-600",
       action: () => {
-        setFormData(prev => ({ ...prev, subject: "Request for Insurance Quote", insuranceType: "personal-lines" }));
-        document.getElementById('subject')?.focus();
-      }
+        setFormData((prev) => ({
+          ...prev,
+          subject: "Request for Insurance Quote",
+          insuranceType: "personal-lines",
+        }));
+        document.getElementById("subject")?.focus();
+      },
     },
     {
       icon: MessageCircle,
@@ -138,7 +152,7 @@ export default function Contact() {
       color: "text-green-600",
       action: () => {
         window.location.href = "tel:0878026266";
-      }
+      },
     },
     {
       icon: Users,
@@ -146,9 +160,12 @@ export default function Contact() {
       description: "Free consultation with our insurance experts",
       color: "text-purple-600",
       action: () => {
-        setFormData(prev => ({ ...prev, subject: "Request for Free Consultation" }));
-        document.getElementById('subject')?.focus();
-      }
+        setFormData((prev) => ({
+          ...prev,
+          subject: "Request for Free Consultation",
+        }));
+        document.getElementById("subject")?.focus();
+      },
     },
     {
       icon: Calendar,
@@ -157,10 +174,12 @@ export default function Contact() {
       color: "text-orange-600",
       action: () => {
         const subject = encodeURIComponent("Schedule Meeting Request");
-        const body = encodeURIComponent("I would like to schedule a meeting to discuss my insurance needs.\n\nPreferred dates and times:\n\nContact me at:\nPhone: \nEmail: ");
+        const body = encodeURIComponent(
+          "I would like to schedule a meeting to discuss my insurance needs.\n\nPreferred dates and times:\n\nContact me at:\nPhone: \nEmail: ",
+        );
         window.location.href = `mailto:info@mrsolution.co.za?subject=${subject}&body=${body}`;
-      }
-    }
+      },
+    },
   ];
 
   return (
@@ -171,7 +190,7 @@ export default function Contact() {
           <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-400/20 to-purple-500/20 rounded-full blur-3xl animate-float"></div>
           <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-purple-400/15 to-pink-500/15 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Contact
@@ -180,8 +199,8 @@ export default function Contact() {
             </span>
           </h1>
           <p className="text-xl text-gray-200 mb-8 max-w-2xl mx-auto">
-            Get in touch with our expert team for personalized insurance solutions
-            and comprehensive coverage options.
+            Get in touch with our expert team for personalized insurance
+            solutions and comprehensive coverage options.
           </p>
         </div>
       </section>
@@ -191,16 +210,25 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {contactInfo.map((info, index) => (
-              <Card key={index} className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer bg-gray-800/50 border-gray-700/50"
-                    onClick={() => info.action !== "#" && window.open(info.action, "_self")}>
+              <Card
+                key={index}
+                className="group hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer bg-gray-800/50 border-gray-700/50"
+                onClick={() =>
+                  info.action !== "#" && window.open(info.action, "_self")
+                }
+              >
                 <CardContent className="p-6 text-center">
                   <div className="bg-gradient-to-br from-primary/10 to-purple-500/10 w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                     <info.icon className="h-8 w-8 text-primary" />
                   </div>
-                  <h3 className="text-lg font-semibold text-white mb-3">{info.title}</h3>
+                  <h3 className="text-lg font-semibold text-white mb-3">
+                    {info.title}
+                  </h3>
                   <div className="space-y-1">
                     {info.details.map((detail, idx) => (
-                      <p key={idx} className="text-gray-200 text-sm">{detail}</p>
+                      <p key={idx} className="text-gray-200 text-sm">
+                        {detail}
+                      </p>
                     ))}
                   </div>
                 </CardContent>
@@ -214,20 +242,24 @@ export default function Contact() {
       <section className="py-20 bg-gradient-to-br from-gray-800 to-blue-900/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
             {/* Contact Form */}
             <Card className="shadow-2xl">
               <CardHeader className="bg-gradient-to-r from-primary/5 to-purple-500/5">
-                <CardTitle className="text-2xl text-gray-900 dark:text-white">Send us a Message</CardTitle>
+                <CardTitle className="text-2xl text-gray-900 dark:text-white">
+                  Send us a Message
+                </CardTitle>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Fill out the form below and we'll get back to you within 24 hours.
+                  Fill out the form below and we'll get back to you within 24
+                  hours.
                 </p>
               </CardHeader>
               <CardContent className="p-6">
                 {isSubmitted ? (
                   <div className="text-center py-8">
                     <CheckCircle className="h-16 w-16 text-green-500 mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">Message Sent!</h3>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                      Message Sent!
+                    </h3>
                     <p className="text-gray-600 dark:text-gray-300">
                       Thank you for contacting us. We'll get back to you soon.
                     </p>
@@ -241,7 +273,9 @@ export default function Contact() {
                           id="name"
                           type="text"
                           value={formData.name}
-                          onChange={(e) => handleInputChange("name", e.target.value)}
+                          onChange={(e) =>
+                            handleInputChange("name", e.target.value)
+                          }
                           required
                           className="mt-1"
                           placeholder="John Doe"
@@ -253,7 +287,9 @@ export default function Contact() {
                           id="phone"
                           type="tel"
                           value={formData.phone}
-                          onChange={(e) => handleInputChange("phone", e.target.value)}
+                          onChange={(e) =>
+                            handleInputChange("phone", e.target.value)
+                          }
                           className="mt-1"
                           placeholder="+27 (0) 11 123 4567"
                         />
@@ -266,7 +302,9 @@ export default function Contact() {
                         id="email"
                         type="email"
                         value={formData.email}
-                        onChange={(e) => handleInputChange("email", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("email", e.target.value)
+                        }
                         required
                         className="mt-1"
                         placeholder="john@example.com"
@@ -280,7 +318,9 @@ export default function Contact() {
                           id="subject"
                           type="text"
                           value={formData.subject}
-                          onChange={(e) => handleInputChange("subject", e.target.value)}
+                          onChange={(e) =>
+                            handleInputChange("subject", e.target.value)
+                          }
                           required
                           className="mt-1"
                           placeholder="Inquiry about insurance"
@@ -288,18 +328,36 @@ export default function Contact() {
                       </div>
                       <div>
                         <Label htmlFor="insuranceType">Insurance Type</Label>
-                        <Select onValueChange={(value) => handleInputChange("insuranceType", value)}>
+                        <Select
+                          onValueChange={(value) =>
+                            handleInputChange("insuranceType", value)
+                          }
+                        >
                           <SelectTrigger className="mt-1">
                             <SelectValue placeholder="Select insurance type" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="personal-lines">Personal Lines Insurance</SelectItem>
-                            <SelectItem value="commercial">Commercial Insurance</SelectItem>
-                            <SelectItem value="liability">Liability Insurance</SelectItem>
-                            <SelectItem value="uber-ehailing">Uber & E-Hailing Insurance</SelectItem>
-                            <SelectItem value="performance-guarantees">Performance Guarantees</SelectItem>
-                            <SelectItem value="contractors-risks">Contractors All Risks</SelectItem>
-                            <SelectItem value="plant-risks">Plant All Risks Insurance</SelectItem>
+                            <SelectItem value="personal-lines">
+                              Personal Lines Insurance
+                            </SelectItem>
+                            <SelectItem value="commercial">
+                              Commercial Insurance
+                            </SelectItem>
+                            <SelectItem value="liability">
+                              Liability Insurance
+                            </SelectItem>
+                            <SelectItem value="uber-ehailing">
+                              Uber & E-Hailing Insurance
+                            </SelectItem>
+                            <SelectItem value="performance-guarantees">
+                              Performance Guarantees
+                            </SelectItem>
+                            <SelectItem value="contractors-risks">
+                              Contractors All Risks
+                            </SelectItem>
+                            <SelectItem value="plant-risks">
+                              Plant All Risks Insurance
+                            </SelectItem>
                             <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
                         </Select>
@@ -311,17 +369,19 @@ export default function Contact() {
                       <Textarea
                         id="message"
                         value={formData.message}
-                        onChange={(e) => handleInputChange("message", e.target.value)}
+                        onChange={(e) =>
+                          handleInputChange("message", e.target.value)
+                        }
                         required
                         className="mt-1 min-h-[120px]"
                         placeholder="Please describe your insurance needs or ask any questions..."
                       />
                     </div>
 
-                    <MovingButton 
-                      type="submit" 
-                      variant="primary" 
-                      size="lg" 
+                    <MovingButton
+                      type="submit"
+                      variant="primary"
+                      size="lg"
                       className="w-full"
                       disabled={isSubmitting}
                     >
@@ -344,7 +404,9 @@ export default function Contact() {
               {/* Google Maps */}
               <Card className="overflow-hidden shadow-2xl">
                 <CardHeader>
-                  <CardTitle className="text-xl text-gray-900 dark:text-white">Visit Our Office</CardTitle>
+                  <CardTitle className="text-xl text-gray-900 dark:text-white">
+                    Visit Our Office
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="p-0">
                   <div className="relative h-64 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20">
@@ -368,7 +430,9 @@ export default function Contact() {
               {/* Quick Services */}
               <Card className="shadow-2xl">
                 <CardHeader>
-                  <CardTitle className="text-xl text-gray-900 dark:text-white">Quick Services</CardTitle>
+                  <CardTitle className="text-xl text-gray-900 dark:text-white">
+                    Quick Services
+                  </CardTitle>
                 </CardHeader>
                 <CardContent className="p-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -378,9 +442,15 @@ export default function Contact() {
                         onClick={service.action}
                         className="group p-4 rounded-xl bg-gradient-to-br from-gray-50 to-blue-50/50 dark:from-gray-800/50 dark:to-blue-900/10 hover:shadow-lg transition-all duration-300 cursor-pointer hover:scale-105"
                       >
-                        <service.icon className={`h-8 w-8 ${service.color} mb-3 group-hover:scale-110 transition-transform duration-300`} />
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">{service.title}</h4>
-                        <p className="text-sm text-gray-600 dark:text-gray-300">{service.description}</p>
+                        <service.icon
+                          className={`h-8 w-8 ${service.color} mb-3 group-hover:scale-110 transition-transform duration-300`}
+                        />
+                        <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                          {service.title}
+                        </h4>
+                        <p className="text-sm text-gray-600 dark:text-gray-300">
+                          {service.description}
+                        </p>
                       </div>
                     ))}
                   </div>
@@ -397,18 +467,31 @@ export default function Contact() {
           <Card className="bg-gradient-to-r from-red-500 to-orange-500 text-white shadow-2xl">
             <CardContent className="p-8 text-center">
               <Phone className="h-12 w-12 mx-auto mb-4 animate-pulse" />
-              <h3 className="text-2xl font-bold mb-2">24/7 Emergency Claims Support</h3>
+              <h3 className="text-2xl font-bold mb-2">
+                24/7 Emergency Claims Support
+              </h3>
               <p className="text-red-100 mb-6">
-                Need immediate assistance with a claim? Our emergency hotline is available 24/7.
+                Need immediate assistance with a claim? Our emergency hotline is
+                available 24/7.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button asChild size="lg" variant="secondary" className="bg-white text-red-600 hover:bg-red-50">
+                <Button
+                  asChild
+                  size="lg"
+                  variant="secondary"
+                  className="bg-white text-red-600 hover:bg-red-50"
+                >
                   <a href="tel:0878026266">
                     <Phone className="mr-2 h-5 w-5" />
                     Call 087 802 6266
                   </a>
                 </Button>
-                <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-red-600">
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white hover:text-red-600"
+                >
                   <a href="mailto:info@mrsolution.co.za">
                     <Mail className="mr-2 h-5 w-5" />
                     Email Us
@@ -426,13 +509,14 @@ export default function Contact() {
           <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float"></div>
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-300/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
-        
+
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
             Ready to Get Protected?
           </h2>
           <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-            Don't wait until it's too late. Get comprehensive insurance coverage today.
+            Don't wait until it's too late. Get comprehensive insurance coverage
+            today.
           </p>
           <MovingButton asChild variant="floating" size="lg">
             <a href="tel:0878026266">
