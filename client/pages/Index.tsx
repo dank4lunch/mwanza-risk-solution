@@ -59,7 +59,7 @@ export default function Index() {
       icon: Cross,
       title: "Medical Aid",
       description: "Quality healthcare coverage",
-      color: "text-purple-600",
+      color: "text-blue-600",
     },
     {
       icon: UserCheck,
@@ -195,9 +195,9 @@ export default function Index() {
                   20+ Years of Experience
                 </span>
               </div>
-              <div className="flex items-center space-x-2 bg-gray-800/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-2xl shadow-purple-500/20 hover:shadow-purple-500/40 border border-purple-400/20 transition-all duration-300 hover:scale-105 hover:-translate-y-1 group">
-                <Users className="h-5 w-5 text-purple-400 group-hover:rotate-12 transition-transform duration-300" />
-                <span className="bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
+              <div className="flex items-center space-x-2 bg-gray-800/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/40 border border-blue-400/20 transition-all duration-300 hover:scale-105 hover:-translate-y-1 group">
+                <Users className="h-5 w-5 text-blue-400 group-hover:rotate-12 transition-transform duration-300" />
+                <span className="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
                   Your Partner in Managing Risk
                 </span>
               </div>
@@ -223,7 +223,7 @@ export default function Index() {
                   <stat.icon className="h-10 w-10 text-primary group-hover:scale-110 transition-transform duration-300" />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl group-hover:from-white/30"></div>
                 </div>
-                <div className="text-4xl font-bold bg-gradient-to-r from-white via-blue-400 to-purple-400 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-4xl font-bold bg-gradient-to-r from-white via-blue-400 to-blue-600 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">
                   {stat.value}
                 </div>
                 <div className="text-gray-300 group-hover:text-primary transition-colors duration-300">
@@ -347,7 +347,7 @@ export default function Index() {
                 <p className="text-gray-200 group-hover:text-gray-100 transition-colors duration-300">
                   {feature.description}
                 </p>
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             ))}
@@ -361,14 +361,14 @@ export default function Index() {
           {/* Animated grid pattern */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,black_70%,transparent_110%)] animate-pulse"></div>
           <div
-            className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-conic from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-spin"
+            className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-conic from-blue-500/20 via-blue-400/20 to-white/20 rounded-full blur-3xl animate-spin"
             style={{ animationDuration: "20s" }}
           ></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-4">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-white via-blue-200 to-blue-300 bg-clip-text text-transparent mb-4">
               Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -492,7 +492,7 @@ export default function Index() {
                 alt="Professional handshake representing partnership and trust in insurance"
                 className="rounded-2xl shadow-2xl shadow-blue-500/20 w-full h-[400px] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-2xl"></div>
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="bg-gray-800/95 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700/50">
                   <h3 className="text-xl font-bold text-white mb-2">
@@ -559,10 +559,10 @@ export default function Index() {
       </section>
 
       {/* Latest Updates Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900/10 to-purple-900/10 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-brand-navy-dark via-brand-navy to-blue-900/10 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-indigo-400/15 to-cyan-400/15 rounded-full blur-3xl animate-pulse delay-500"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-gradient-to-r from-pink-400/15 to-purple-400/15 rounded-full blur-3xl animate-float delay-1000"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-gradient-to-r from-white/15 to-blue-400/15 rounded-full blur-3xl animate-float delay-1000"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -594,7 +594,7 @@ export default function Index() {
                   "We're revolutionizing claims processing with advanced AI technology...",
                 date: "Dec 10, 2023",
                 readTime: "5 min read",
-                gradient: "from-purple-500/20 to-pink-500/20",
+                gradient: "from-blue-500/20 to-white/20",
               },
               {
                 category: "Tips & Advice",
@@ -772,7 +772,7 @@ export default function Index() {
       <section className="py-20 bg-gradient-to-br from-brand-blue via-brand-blue-dark to-brand-navy relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-300/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
