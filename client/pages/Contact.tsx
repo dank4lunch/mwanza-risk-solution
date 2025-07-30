@@ -351,15 +351,15 @@ export default function Contact() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg" variant="secondary" className="bg-white text-red-600 hover:bg-red-50">
-                  <a href="tel:+27111234567">
+                  <a href="tel:0878026266">
                     <Phone className="mr-2 h-5 w-5" />
-                    Call Emergency Line
+                    Call 087 802 6266
                   </a>
                 </Button>
                 <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-red-600">
-                  <a href="mailto:emergency@mwanzarisk.co.za">
+                  <a href="mailto:info@mrsolution.co.za">
                     <Mail className="mr-2 h-5 w-5" />
-                    Email Emergency
+                    Email Us
                   </a>
                 </Button>
               </div>
