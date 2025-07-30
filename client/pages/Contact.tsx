@@ -383,7 +383,7 @@ export default function Contact() {
             Don't wait until it's too late. Get comprehensive insurance coverage today.
           </p>
           <MovingButton asChild variant="floating" size="lg">
-            <a href="tel:+27111234567">
+            <a href="tel:0878026266">
               <Phone className="mr-2 h-5 w-5" />
               Call Now for Instant Quote
             </a>
