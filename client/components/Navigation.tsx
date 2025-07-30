@@ -21,18 +21,18 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center group">
-            <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-700/60 backdrop-blur-sm rounded-xl p-3 shadow-lg shadow-blue-500/20 transition-all duration-300 group-hover:shadow-blue-500/40 group-hover:scale-105 group-hover:-translate-y-0.5 border border-gray-600/30 group-hover:border-blue-400/30">
-              <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F638bb35e274840ce81c9d7bdb01f9214%2Fc01e8e59eed8466bb5c016658c78945a?format=webp&width=400"
-                alt="Mwanza Risk Solutions"
-                className="h-10 w-auto transition-all duration-300 group-hover:scale-105 relative z-10"
-                style={{
-                  mixBlendMode: "multiply",
-                  filter: "contrast(1.2) brightness(1.1)",
-                }}
-              />
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-blue-500/5 to-transparent rounded-xl group-hover:from-blue-500/20 group-hover:via-blue-500/10 transition-all duration-300"></div>
-              <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-xl group-hover:from-white/10 transition-all duration-300"></div>
+            <div className="relative bg-gradient-to-br from-gray-900/90 to-gray-800/70 backdrop-blur-lg rounded-xl px-4 py-2 shadow-xl shadow-blue-500/20 transition-all duration-300 group-hover:shadow-blue-500/40 group-hover:scale-105 group-hover:-translate-y-0.5 border border-gray-600/30 group-hover:border-blue-400/50">
+              <div className="flex flex-col items-center relative z-10">
+                <span className="text-2xl font-bold text-transparent bg-gradient-to-r from-blue-400 via-blue-500 to-blue-600 bg-clip-text transition-all duration-300 group-hover:from-blue-300 group-hover:via-blue-400 group-hover:to-blue-500">
+                  MWANZA
+                </span>
+                <span className="text-xs font-medium text-gray-300 tracking-wider -mt-1 group-hover:text-gray-200 transition-colors duration-300">
+                  RISK SOLUTION
+                </span>
+              </div>
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/15 via-blue-500/8 to-transparent rounded-xl group-hover:from-blue-500/25 group-hover:via-blue-500/15 transition-all duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-white/8 to-transparent rounded-xl group-hover:from-white/15 transition-all duration-300"></div>
+              <div className="absolute inset-0 backdrop-blur-lg rounded-xl"></div>
             </div>
           </Link>
 
