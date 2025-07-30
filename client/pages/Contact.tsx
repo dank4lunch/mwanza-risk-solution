@@ -349,7 +349,7 @@ export default function Contact() {
                 <CardContent className="p-0">
                   <div className="relative h-64 bg-gradient-to-br from-blue-100 to-purple-100 dark:from-blue-900/20 dark:to-purple-900/20">
                     <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.047853358741!2d28.04726731453916!3d-26.13529998344!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c68f0406a51%3A0x238ac9d9b1d34041!2sSandton%2C%20Johannesburg%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1645564756789!5m2!1sen!2sus"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3584.0478533587415!2d28.047267314539155!3d-26.135299983440016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e950c6b55d78b9d%3A0x7c26e2c3a4b55c67!2s57%206th%20Rd%2C%20Hyde%20Park%2C%20Sandton%2C%202196%2C%20South%20Africa!5e0!3m2!1sen!2sus!4v1645564756789!5m2!1sen!2sus"
                       width="100%"
                       height="256"
                       style={{ border: 0 }}
