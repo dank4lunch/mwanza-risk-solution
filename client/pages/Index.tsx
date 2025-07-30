@@ -285,7 +285,7 @@ export default function Index() {
       </section>
 
       {/* Interactive Features Section */}
-      <section className="py-20 bg-gray-900 relative overflow-hidden">
+      <section className="py-20 bg-brand-navy relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/3 left-1/6 w-72 h-72 bg-gradient-to-r from-green-400/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-300"></div>
           <div className="absolute bottom-1/3 right-1/6 w-64 h-64 bg-gradient-to-r from-orange-400/20 to-yellow-500/20 rounded-full blur-3xl animate-float delay-700"></div>
