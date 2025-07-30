@@ -53,8 +53,8 @@ const MovingButton = React.forwardRef<HTMLButtonElement, MovingButtonProps>(
             variant === "primary" && "bg-gradient-to-br from-blue-600/50 via-blue-700/50 to-blue-800/50 blur-lg group-hover:blur-xl",
             variant === "glowing" && "bg-gradient-to-r from-white/50 via-blue-500/50 to-blue-700/50 blur-lg",
             variant === "neon" && "bg-cyan-400/30 blur-lg",
-            variant === "rainbow" && "bg-gradient-to-r from-red-600/50 via-yellow-600/50 via-green-600/50 via-blue-600/50 via-indigo-600/50 to-purple-600/50 blur-lg",
-            variant === "floating" && "bg-gradient-to-tr from-purple-500/50 via-pink-600/50 to-red-600/50 blur-lg"
+            variant === "rainbow" && "bg-gradient-to-r from-white/50 via-blue-500/50 via-blue-600/50 via-blue-700/50 via-blue-800/50 to-blue-900/50 blur-lg",
+            variant === "floating" && "bg-gradient-to-tr from-blue-500/50 via-blue-600/50 to-blue-700/50 blur-lg"
           )} style={{
             transform: "translateY(4px) translateZ(-10px)",
           }}></div>
