@@ -61,18 +61,21 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Phone className="h-4 w-4 text-primary" />
-                <span className="text-gray-400 text-sm">+27 (0) 11 123 4567</span>
+                <div className="text-gray-400 text-sm">
+                  <a href="tel:0878026266" className="block hover:text-white transition-colors">087 802 6266</a>
+                  <a href="tel:0825604131" className="block hover:text-white transition-colors">082 560 4131</a>
+                </div>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="h-4 w-4 text-primary" />
-                <span className="text-gray-400 text-sm">info@mwanzarisk.co.za</span>
+                <a href="mailto:info@mrsolution.co.za" className="text-gray-400 text-sm hover:text-white transition-colors">info@mrsolution.co.za</a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="h-4 w-4 text-primary" />
-                <span className="text-gray-400 text-sm">
-                  123 Business District<br />
-                  Johannesburg, South Africa
-                </span>
+                <a href="https://maps.google.com/?q=57+6th+Road,+Hyde+Park,+Sandton+2196" target="_blank" rel="noopener noreferrer" className="text-gray-400 text-sm hover:text-white transition-colors">
+                  57 6th Road, Hyde Park<br />
+                  Sandton 2196, South Africa
+                </a>
               </div>
             </div>
 
