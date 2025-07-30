@@ -77,8 +77,8 @@ const MovingButton = React.forwardRef<HTMLButtonElement, MovingButtonProps>(
           {variant === "glowing" && (
             <div className="absolute inset-0 rounded-2xl opacity-30">
               <div className="absolute top-2 left-2 w-1 h-1 bg-white rounded-full animate-ping"></div>
-              <div className="absolute top-4 right-3 w-0.5 h-0.5 bg-cyan-300 rounded-full animate-pulse delay-300"></div>
-              <div className="absolute bottom-3 left-4 w-0.5 h-0.5 bg-purple-300 rounded-full animate-ping delay-700"></div>
+              <div className="absolute top-4 right-3 w-0.5 h-0.5 bg-blue-300 rounded-full animate-pulse delay-300"></div>
+              <div className="absolute bottom-3 left-4 w-0.5 h-0.5 bg-white rounded-full animate-ping delay-700"></div>
               <div className="absolute bottom-2 right-2 w-1 h-1 bg-blue-300 rounded-full animate-pulse delay-1000"></div>
             </div>
           )}
