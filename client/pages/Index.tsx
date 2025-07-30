@@ -287,8 +287,8 @@ export default function Index() {
       {/* Interactive Features Section */}
       <section className="py-20 bg-brand-navy relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/3 left-1/6 w-72 h-72 bg-gradient-to-r from-green-400/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-300"></div>
-          <div className="absolute bottom-1/3 right-1/6 w-64 h-64 bg-gradient-to-r from-orange-400/20 to-yellow-500/20 rounded-full blur-3xl animate-float delay-700"></div>
+          <div className="absolute top-1/3 left-1/6 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-300"></div>
+          <div className="absolute bottom-1/3 right-1/6 w-64 h-64 bg-gradient-to-r from-white/20 to-blue-400/20 rounded-full blur-3xl animate-float delay-700"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
