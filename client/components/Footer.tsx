@@ -81,13 +81,13 @@ export default function Footer() {
 
             {/* Social Links */}
             <div className="flex items-center space-x-4 mt-6">
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="https://facebook.com/mwanzarisksolution" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="https://twitter.com/mwanzarisk" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                 <Twitter className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary transition-colors">
+              <a href="https://linkedin.com/company/mwanza-risk-solution" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-primary transition-colors">
                 <Linkedin className="h-5 w-5" />
               </a>
             </div>
