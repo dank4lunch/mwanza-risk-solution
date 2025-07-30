@@ -80,7 +80,7 @@ export default function Navigation() {
                   className={cn(
                     "block px-3 py-2 text-base font-medium transition-all duration-300 rounded-lg",
                     location.pathname === item.href
-                      ? "text-primary bg-gradient-to-r from-primary/10 to-purple-500/10 border-l-4 border-primary"
+                      ? "text-primary bg-gradient-to-r from-primary/10 to-blue-500/10 border-l-4 border-primary"
                       : "text-gray-200 hover:text-primary hover:bg-primary/5"
                   )}
                   onClick={() => setIsOpen(false)}
