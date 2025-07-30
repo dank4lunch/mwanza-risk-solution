@@ -23,10 +23,13 @@ export default function Navigation() {
           <Link to="/" className="flex items-center group">
             <div className="relative bg-gradient-to-br from-gray-800/80 to-gray-700/60 backdrop-blur-sm rounded-xl p-3 shadow-lg shadow-blue-500/20 transition-all duration-300 group-hover:shadow-blue-500/40 group-hover:scale-105 group-hover:-translate-y-0.5 border border-gray-600/30 group-hover:border-blue-400/30">
               <img
-                src="https://cdn.builder.io/api/v1/image/assets%2F40f4f3f8cf004cb78312fbe6b3e1cec8%2F8da1c807f86140519b745a7f486c5b46?format=webp&width=200"
+                src="https://cdn.builder.io/api/v1/image/assets%2F638bb35e274840ce81c9d7bdb01f9214%2Fc01e8e59eed8466bb5c016658c78945a?format=webp&width=400"
                 alt="Mwanza Risk Solutions"
-                className="h-10 w-auto transition-all duration-300 group-hover:scale-105 relative z-10 mix-blend-multiply"
-                style={{ filter: 'brightness(0) saturate(100%) invert(47%) sepia(96%) saturate(1285%) hue-rotate(204deg) brightness(90%) contrast(101%)' }}
+                className="h-10 w-auto transition-all duration-300 group-hover:scale-105 relative z-10"
+                style={{
+                  mixBlendMode: 'multiply',
+                  filter: 'contrast(1.2) brightness(1.1)'
+                }}
               />
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-blue-500/5 to-transparent rounded-xl group-hover:from-blue-500/20 group-hover:via-blue-500/10 transition-all duration-300"></div>
               <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-xl group-hover:from-white/10 transition-all duration-300"></div>
