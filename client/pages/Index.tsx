@@ -33,39 +33,43 @@ export default function Index() {
   const services = [
     {
       icon: Building,
-      title: "Business Insurance",
-      description: "Protect your business with comprehensive coverage",
+      title: "Personal Lines Insurance",
+      description:
+        "Protect your home, automobile, and personal items from unexpected catastrophes",
       color: "text-blue-600",
     },
     {
       icon: Heart,
-      title: "Life Insurance",
-      description: "Secure your family's financial future",
-      color: "text-red-500",
-    },
-    {
-      icon: Car,
-      title: "Vehicle Insurance",
-      description: "Complete motor vehicle protection",
+      title: "Commercial Insurance",
+      description:
+        "Comprehensive business protection for property, liability, and operations",
       color: "text-green-600",
     },
     {
-      icon: Wheat,
-      title: "Agricultural Insurance",
-      description: "Protect your farming investments",
-      color: "text-yellow-600",
-    },
-    {
-      icon: Cross,
-      title: "Medical Aid",
-      description: "Quality healthcare coverage",
+      icon: Car,
+      title: "Uber & E-Hailing Insurance",
+      description: "Specialized coverage for ride-hailing drivers and vehicles",
       color: "text-purple-600",
     },
     {
+      icon: Shield,
+      title: "Liability Insurance",
+      description: "Safeguard your assets from legal claims and litigation",
+      color: "text-red-600",
+    },
+    {
+      icon: Cross,
+      title: "Contractors All Risks",
+      description:
+        "Complete coverage for construction sites and contractor operations",
+      color: "text-orange-600",
+    },
+    {
       icon: UserCheck,
-      title: "Funeral Cover",
-      description: "Dignified farewell arrangements",
-      color: "text-gray-600",
+      title: "Plant All Risks Insurance",
+      description:
+        "Comprehensive protection for construction plant and equipment",
+      color: "text-cyan-600",
     },
   ];
 
@@ -103,24 +107,24 @@ export default function Index() {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-blue-900/20 to-purple-900/20">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-brand-navy-dark via-brand-navy to-brand-navy-light">
         {/* Animated Background Elements */}
         <div className="absolute inset-0">
           {/* Main gradient orbs */}
           <div
-            className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-blue-400/30 via-purple-500/20 to-pink-500/30 rounded-full blur-3xl animate-float"
+            className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-r from-brand-blue/20 via-brand-blue-light/15 to-brand-blue-dark/20 rounded-full blur-3xl animate-float"
             style={{
               transform: `translateY(${scrollY * 0.5}px) rotate(${scrollY * 0.1}deg)`,
             }}
           />
           <div
-            className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-cyan-400/25 via-blue-500/20 to-purple-600/25 rounded-full blur-3xl animate-pulse delay-1000"
+            className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-brand-navy-light/25 via-brand-navy/20 to-brand-navy-dark/25 rounded-full blur-3xl animate-pulse delay-1000"
             style={{
               transform: `translateY(${scrollY * -0.3}px) rotate(${scrollY * -0.1}deg)`,
             }}
           />
           <div
-            className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-yellow-400/20 via-orange-500/15 to-red-500/20 rounded-full blur-2xl animate-float delay-500"
+            className="absolute top-1/2 left-1/2 w-64 h-64 bg-gradient-to-r from-brand-blue-light/15 via-brand-blue/20 to-brand-blue-dark/15 rounded-full blur-2xl animate-float delay-500"
             style={{
               transform: `translate(-50%, -50%) translateY(${scrollY * 0.2}px) rotate(${scrollY * 0.05}deg)`,
             }}
@@ -131,7 +135,7 @@ export default function Index() {
             {[...Array(20)].map((_, i) => (
               <div
                 key={i}
-                className={`absolute w-2 h-2 bg-gradient-to-r from-blue-400 to-purple-500 rounded-full animate-particle opacity-60`}
+                className={`absolute w-2 h-2 bg-gradient-to-r from-brand-blue to-brand-blue-light rounded-full animate-particle opacity-60`}
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
@@ -145,7 +149,7 @@ export default function Index() {
             {[...Array(6)].map((_, i) => (
               <div
                 key={`large-${i}`}
-                className={`absolute w-1 h-1 bg-gradient-to-r from-cyan-300 to-blue-400 rounded-full animate-float opacity-40`}
+                className={`absolute w-1 h-1 bg-gradient-to-r from-brand-blue-light to-brand-blue rounded-full animate-float opacity-40`}
                 style={{
                   left: `${Math.random() * 100}%`,
                   top: `${Math.random() * 100}%`,
@@ -163,9 +167,9 @@ export default function Index() {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in-up">
             <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-              Your Partners in
+              YOUR PARTNERS IN
               <span className="block bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                Personal Insurance
+                SHORT TERM INSURANCE
               </span>
             </h1>
 
@@ -195,9 +199,9 @@ export default function Index() {
                   20+ Years of Experience
                 </span>
               </div>
-              <div className="flex items-center space-x-2 bg-gray-800/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-2xl shadow-purple-500/20 hover:shadow-purple-500/40 border border-purple-400/20 transition-all duration-300 hover:scale-105 hover:-translate-y-1 group">
-                <Users className="h-5 w-5 text-purple-400 group-hover:rotate-12 transition-transform duration-300" />
-                <span className="bg-gradient-to-r from-white to-purple-400 bg-clip-text text-transparent">
+              <div className="flex items-center space-x-2 bg-gray-800/90 backdrop-blur-xl px-6 py-3 rounded-2xl shadow-2xl shadow-blue-500/20 hover:shadow-blue-500/40 border border-blue-400/20 transition-all duration-300 hover:scale-105 hover:-translate-y-1 group">
+                <Users className="h-5 w-5 text-blue-400 group-hover:rotate-12 transition-transform duration-300" />
+                <span className="bg-gradient-to-r from-white to-blue-400 bg-clip-text text-transparent">
                   Your Partner in Managing Risk
                 </span>
               </div>
@@ -214,7 +218,7 @@ export default function Index() {
       </section>
 
       {/* Stats Section */}
-      <section className="py-20 bg-gray-900/50 backdrop-blur-xl">
+      <section className="py-20 bg-brand-navy/95 backdrop-blur-xl">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
@@ -223,7 +227,7 @@ export default function Index() {
                   <stat.icon className="h-10 w-10 text-primary group-hover:scale-110 transition-transform duration-300" />
                   <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-2xl group-hover:from-white/30"></div>
                 </div>
-                <div className="text-4xl font-bold bg-gradient-to-r from-white via-blue-400 to-purple-400 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">
+                <div className="text-4xl font-bold bg-gradient-to-r from-white via-blue-400 to-blue-600 bg-clip-text text-transparent mb-3 group-hover:scale-110 transition-transform duration-300">
                   {stat.value}
                 </div>
                 <div className="text-gray-300 group-hover:text-primary transition-colors duration-300">
@@ -236,7 +240,7 @@ export default function Index() {
       </section>
 
       {/* Services Preview */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900/10 to-purple-900/10">
+      <section className="py-20 bg-gradient-to-br from-brand-navy-dark via-brand-navy to-brand-navy-light/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -285,10 +289,10 @@ export default function Index() {
       </section>
 
       {/* Interactive Features Section */}
-      <section className="py-20 bg-gray-900 relative overflow-hidden">
+      <section className="py-20 bg-brand-navy relative overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute top-1/3 left-1/6 w-72 h-72 bg-gradient-to-r from-green-400/20 to-emerald-500/20 rounded-full blur-3xl animate-pulse delay-300"></div>
-          <div className="absolute bottom-1/3 right-1/6 w-64 h-64 bg-gradient-to-r from-orange-400/20 to-yellow-500/20 rounded-full blur-3xl animate-float delay-700"></div>
+          <div className="absolute top-1/3 left-1/6 w-72 h-72 bg-gradient-to-r from-blue-400/20 to-blue-500/20 rounded-full blur-3xl animate-pulse delay-300"></div>
+          <div className="absolute bottom-1/3 right-1/6 w-64 h-64 bg-gradient-to-r from-white/20 to-blue-400/20 rounded-full blur-3xl animate-float delay-700"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -347,7 +351,7 @@ export default function Index() {
                 <p className="text-gray-200 group-hover:text-gray-100 transition-colors duration-300">
                   {feature.description}
                 </p>
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-purple-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-blue-500/5 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 bg-gradient-to-br from-white/5 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
             ))}
@@ -356,19 +360,19 @@ export default function Index() {
       </section>
 
       {/* Trust Indicators Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-800 via-gray-900 to-black relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-brand-navy-dark via-brand-navy to-brand-navy-light relative overflow-hidden">
         <div className="absolute inset-0">
           {/* Animated grid pattern */}
           <div className="absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.1)_1px,transparent_1px)] bg-[size:60px_60px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,black_70%,transparent_110%)] animate-pulse"></div>
           <div
-            className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-conic from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-spin"
+            className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-conic from-blue-500/20 via-blue-400/20 to-white/20 rounded-full blur-3xl animate-spin"
             style={{ animationDuration: "20s" }}
           ></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-white via-blue-200 to-purple-200 bg-clip-text text-transparent mb-4">
+            <h2 className="text-4xl font-bold bg-gradient-to-r from-white via-blue-200 to-blue-300 bg-clip-text text-transparent mb-4">
               Trusted by Industry Leaders
             </h2>
             <p className="text-xl text-gray-300 max-w-2xl mx-auto">
@@ -427,7 +431,7 @@ export default function Index() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-brand-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -492,7 +496,7 @@ export default function Index() {
                 alt="Professional handshake representing partnership and trust in insurance"
                 className="rounded-2xl shadow-2xl shadow-blue-500/20 w-full h-[400px] object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-purple-500/20 rounded-2xl"></div>
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-blue-500/20 rounded-2xl"></div>
               <div className="absolute bottom-6 left-6 right-6">
                 <div className="bg-gray-800/95 backdrop-blur-sm p-6 rounded-xl shadow-lg border border-gray-700/50">
                   <h3 className="text-xl font-bold text-white mb-2">
@@ -512,7 +516,7 @@ export default function Index() {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gradient-to-br from-gray-800 to-blue-900/10">
+      <section className="py-20 bg-gradient-to-br from-brand-navy-dark to-brand-navy">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
@@ -559,10 +563,10 @@ export default function Index() {
       </section>
 
       {/* Latest Updates Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-900 via-blue-900/10 to-purple-900/10 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-brand-navy-dark via-brand-navy to-blue-900/10 relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-1/4 right-1/4 w-80 h-80 bg-gradient-to-r from-indigo-400/15 to-cyan-400/15 rounded-full blur-3xl animate-pulse delay-500"></div>
-          <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-gradient-to-r from-pink-400/15 to-purple-400/15 rounded-full blur-3xl animate-float delay-1000"></div>
+          <div className="absolute bottom-1/4 left-1/4 w-72 h-72 bg-gradient-to-r from-white/15 to-blue-400/15 rounded-full blur-3xl animate-float delay-1000"></div>
         </div>
 
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -594,7 +598,7 @@ export default function Index() {
                   "We're revolutionizing claims processing with advanced AI technology...",
                 date: "Dec 10, 2023",
                 readTime: "5 min read",
-                gradient: "from-purple-500/20 to-pink-500/20",
+                gradient: "from-blue-500/20 to-white/20",
               },
               {
                 category: "Tips & Advice",
@@ -654,7 +658,7 @@ export default function Index() {
       </section>
 
       {/* Interactive Contact Preview */}
-      <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-brand-navy-dark to-brand-navy relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_70%)]"></div>
           <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_70%)]"></div>
@@ -769,10 +773,10 @@ export default function Index() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary via-blue-600 to-purple-700 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-brand-blue via-brand-blue-dark to-brand-navy relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-1/4 w-64 h-64 bg-white/10 rounded-full blur-3xl animate-float"></div>
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-300/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
+          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/10 rounded-full blur-3xl animate-pulse delay-1000"></div>
         </div>
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl font-bold text-white mb-6">
