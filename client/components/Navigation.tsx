@@ -35,7 +35,7 @@ export default function Navigation() {
                 key={item.name}
                 to={item.href}
                 className={cn(
-                  "text-sm font-medium transition-all duration-300 hover:text-primary hover:scale-105 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gradient-to-r after:from-primary after:to-purple-500 after:transition-all after:duration-300 hover:after:w-full",
+                  "text-sm font-medium transition-all duration-300 hover:text-primary hover:scale-105 relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 after:bg-gradient-to-r after:from-primary after:to-blue-600 after:transition-all after:duration-300 hover:after:w-full",
                   location.pathname === item.href
                     ? "text-primary after:w-full"
                     : "text-gray-200"
