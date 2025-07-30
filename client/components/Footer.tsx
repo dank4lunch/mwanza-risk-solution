@@ -100,12 +100,26 @@ export default function Footer() {
               © 2024 Mwanza Risk Solutions. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              <button
+                onClick={() => {
+                  const subject = encodeURIComponent("Privacy Policy Request");
+                  const body = encodeURIComponent("I would like to receive a copy of your Privacy Policy.");
+                  window.location.href = `mailto:info@mrsolution.co.za?subject=${subject}&body=${body}`;
+                }}
+                className="text-gray-400 hover:text-white text-sm transition-colors"
+              >
                 Privacy Policy
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              </button>
+              <button
+                onClick={() => {
+                  const subject = encodeURIComponent("Terms of Service Request");
+                  const body = encodeURIComponent("I would like to receive a copy of your Terms of Service.");
+                  window.location.href = `mailto:info@mrsolution.co.za?subject=${subject}&body=${body}`;
+                }}
+                className="text-gray-400 hover:text-white text-sm transition-colors"
+              >
                 Terms of Service
-              </a>
+              </button>
             </div>
           </div>
         </div>
