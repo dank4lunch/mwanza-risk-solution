@@ -65,25 +65,25 @@ export default function Contact() {
     {
       icon: Phone,
       title: "Phone",
-      details: ["+27 (0) 11 123 4567", "+27 (0) 11 123 4568"],
-      action: "tel:+27111234567"
+      details: ["087 802 6266", "082 560 4131"],
+      action: "tel:0878026266"
     },
     {
       icon: Mail,
       title: "Email",
-      details: ["info@mwanzarisk.co.za", "support@mwanzarisk.co.za"],
-      action: "mailto:info@mwanzarisk.co.za"
+      details: ["info@mrsolution.co.za"],
+      action: "mailto:info@mrsolution.co.za"
     },
     {
       icon: MapPin,
       title: "Address",
-      details: ["123 Business District", "Johannesburg, South Africa", "2000"],
-      action: "#"
+      details: ["57 6th Road, Hyde Park", "Sandton 2196", "South Africa"],
+      action: "https://maps.google.com/?q=57+6th+Road,+Hyde+Park,+Sandton+2196"
     },
     {
       icon: Clock,
       title: "Business Hours",
-      details: ["Mon - Fri: 8:00 AM - 6:00 PM", "Sat: 9:00 AM - 2:00 PM", "Sun: Closed"],
+      details: ["Mon - Fri: 8:00 AM - 5:00 PM", "Sat: 9:00 AM - 1:00 PM", "Sun: Closed"],
       action: "#"
     }
   ];
