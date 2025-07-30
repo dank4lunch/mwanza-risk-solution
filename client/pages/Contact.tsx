@@ -125,25 +125,41 @@ export default function Contact() {
       icon: Shield,
       title: "Get a Quote",
       description: "Receive a personalized insurance quote within 24 hours",
-      color: "text-blue-600"
+      color: "text-blue-600",
+      action: () => {
+        setFormData(prev => ({ ...prev, subject: "Request for Insurance Quote", insuranceType: "personal-lines" }));
+        document.getElementById('subject')?.focus();
+      }
     },
     {
       icon: MessageCircle,
       title: "Claims Support",
       description: "24/7 assistance for all your insurance claims",
-      color: "text-green-600"
+      color: "text-green-600",
+      action: () => {
+        window.location.href = "tel:0878026266";
+      }
     },
     {
       icon: Users,
       title: "Consultation",
       description: "Free consultation with our insurance experts",
-      color: "text-purple-600"
+      color: "text-purple-600",
+      action: () => {
+        setFormData(prev => ({ ...prev, subject: "Request for Free Consultation" }));
+        document.getElementById('subject')?.focus();
+      }
     },
     {
       icon: Calendar,
       title: "Schedule Meeting",
       description: "Book an appointment at your convenience",
-      color: "text-orange-600"
+      color: "text-orange-600",
+      action: () => {
+        const subject = encodeURIComponent("Schedule Meeting Request");
+        const body = encodeURIComponent("I would like to schedule a meeting to discuss my insurance needs.\n\nPreferred dates and times:\n\nContact me at:\nPhone: \nEmail: ");
+        window.location.href = `mailto:info@mrsolution.co.za?subject=${subject}&body=${body}`;
+      }
     }
   ];
 
