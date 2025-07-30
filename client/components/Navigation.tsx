@@ -52,7 +52,7 @@ export default function Navigation() {
               <Phone className="h-4 w-4 text-primary" />
               <span>+27 (0) 11 123 4567</span>
             </div>
-            <Button asChild className="bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-purple-600 text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
+            <Button asChild className="bg-gradient-to-r from-primary to-blue-600 hover:from-blue-600 hover:to-blue-700 text-white shadow-lg shadow-blue-500/25 hover:shadow-blue-500/40 transition-all duration-300 hover:scale-105 hover:-translate-y-0.5">
               <Link to="/contact">Get Quote</Link>
             </Button>
           </div>
