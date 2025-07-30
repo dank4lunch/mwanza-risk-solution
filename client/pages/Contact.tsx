@@ -245,12 +245,13 @@ export default function Contact() {
                             <SelectValue placeholder="Select insurance type" />
                           </SelectTrigger>
                           <SelectContent>
-                            <SelectItem value="business">Business Insurance</SelectItem>
-                            <SelectItem value="life">Life Insurance</SelectItem>
-                            <SelectItem value="vehicle">Vehicle Insurance</SelectItem>
-                            <SelectItem value="agricultural">Agricultural Insurance</SelectItem>
-                            <SelectItem value="medical">Medical Aid</SelectItem>
-                            <SelectItem value="funeral">Funeral Cover</SelectItem>
+                            <SelectItem value="personal-lines">Personal Lines Insurance</SelectItem>
+                            <SelectItem value="commercial">Commercial Insurance</SelectItem>
+                            <SelectItem value="liability">Liability Insurance</SelectItem>
+                            <SelectItem value="uber-ehailing">Uber & E-Hailing Insurance</SelectItem>
+                            <SelectItem value="performance-guarantees">Performance Guarantees</SelectItem>
+                            <SelectItem value="contractors-risks">Contractors All Risks</SelectItem>
+                            <SelectItem value="plant-risks">Plant All Risks Insurance</SelectItem>
                             <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
                         </Select>
