@@ -46,12 +46,12 @@ export default function Footer() {
           <div>
             <h3 className="font-semibold text-lg mb-4">Our Services</h3>
             <div className="space-y-2 text-sm">
-              <div className="text-gray-400">Business Insurance</div>
-              <div className="text-gray-400">Life Insurance</div>
-              <div className="text-gray-400">Vehicle Insurance</div>
-              <div className="text-gray-400">Agricultural Insurance</div>
-              <div className="text-gray-400">Medical Aid</div>
-              <div className="text-gray-400">Funeral Cover</div>
+              <Link to="/services" className="block text-gray-400 hover:text-white transition-colors">Personal Lines Insurance</Link>
+              <Link to="/services" className="block text-gray-400 hover:text-white transition-colors">Commercial Insurance</Link>
+              <Link to="/services" className="block text-gray-400 hover:text-white transition-colors">Liability Insurance</Link>
+              <Link to="/services" className="block text-gray-400 hover:text-white transition-colors">Uber & E-Hailing Insurance</Link>
+              <Link to="/services" className="block text-gray-400 hover:text-white transition-colors">Contractors All Risks</Link>
+              <Link to="/services" className="block text-gray-400 hover:text-white transition-colors">Plant All Risks Insurance</Link>
             </div>
           </div>
 
