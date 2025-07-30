@@ -654,7 +654,7 @@ export default function Index() {
       </section>
 
       {/* Interactive Contact Preview */}
-      <section className="py-20 bg-gradient-to-br from-gray-800 to-gray-900 relative overflow-hidden">
+      <section className="py-20 bg-gradient-to-br from-brand-navy-dark to-brand-navy relative overflow-hidden">
         <div className="absolute inset-0">
           <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_70%)]"></div>
           <div className="absolute bottom-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_70%)]"></div>
